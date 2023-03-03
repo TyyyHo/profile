@@ -1,0 +1,26 @@
+// dark theme
+$darkTheme_background: rgb(15, 15, 20);
+$darkTheme_secondary: rgb(34, 41, 41);
+$darkTheme_font: rgb(255, 255, 255);
+$darkTheme_border: rgb(165, 201, 202);
+
+
+// light theme
+$lightTheme_background: rgb(255, 251, 251);
+$lightTheme_secondary: rgb(230, 224, 224);
+$lightTheme_font: rgb(12, 1, 1);
+$lightTheme_border: rgb(165, 201, 202);
+
+
+// -----------------------------------------
+
+.darkTheme {
+    background-color: $darkTheme_background;
+    color: $darkTheme_font;
+}
+
+
+.lightTheme {
+    background-color: $darkTheme_background;
+    color: $darkTheme_font;
+}

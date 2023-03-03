@@ -1,0 +1,84 @@
+.planet {
+    position: relative;
+    top: -700px;
+    right: -35%;
+    width: 1600px;
+    height: 1600px;
+
+    .earth {
+        z-index: 10;
+        cursor: pointer;
+        position: absolute;
+        left: 60%;
+        top: 56%;
+        width: 24%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .orbit {
+        position: absolute;
+        padding: 50px;
+        border-radius: 50%;
+        border: 6px solid rgba(256, 256, 256, 0.2);
+
+        .satellite {
+            width: 75px;
+            position: absolute;
+        }
+    }
+
+    .path1 {
+        animation: spin 6s infinite linear;
+        width: 75%;
+        height: 75%;
+        top: 30%;
+        left: 30%;
+
+        .satellite {
+            animation: satellite-spin 6s infinite linear;
+            left: 11%;
+            top: 11%;
+        }
+    }
+
+    .path2 {
+        animation: spin 8s infinite linear;
+        width: 105%;
+        height: 105%;
+        top: 15%;
+        left: 15%;
+
+        .satellite {
+            animation: satellite-spin 8s infinite linear;
+            left: 12.5%;
+            top: 12%;
+        }
+    }
+
+    .path3 {
+        animation: spin 10s infinite linear;
+        width: 135%;
+        height: 135%;
+
+        .satellite {
+            animation: satellite-spin 10s infinite linear;
+            left: 16%;
+            top: 9%;
+        }
+    }
+
+    @keyframes spin {
+        from {transform: scaleY(0.25) rotate(0deg);}
+        to {transform: scaleY(0.25) rotate(360deg);}
+    }
+
+    @keyframes satellite-spin {
+        from {transform: rotate(0deg) scaleY(4) scale(1);}
+        to {transform: rotate(-360deg) scaleY(4) scale(1);}
+    }
+
+
+}

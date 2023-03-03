@@ -1,0 +1,23 @@
+#spread {
+    width: 100%;
+    height: 300px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
+
+    .gridItem {
+        min-width: 100%;
+        min-height: 100%;
+        outline: 1px solid black;
+        background-color: white;
+
+        &:hover {
+            cursor: pointer;
+            opacity: 0.9;
+        }
+    }
+
+    @keyframes spread {
+        
+    }
+}
