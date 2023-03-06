@@ -1,16 +1,21 @@
-import React from 'react'
-import "./effect.scss"
+import React from "react";
+import "./effect.scss";
 
-import BirdsEye from "./birdsEye/birdsEye"
-import Spread from "./spread/spread"
+import BirdsEye from "./birdsEye/birdsEye";
+import Spread from "./spread/spread";
+import Title from "../title/bouncy/title"
 
 const Effect = () => {
   return (
-    <div id='effectContainer'>
-        <Spread/>
-        <BirdsEye/>
-    </div>
-  )
-}
+    <div id="effect" className="section">
+      <Title title={"Try something COOL!"} />
 
-export default Effect
+      <section id="effectContainer">
+        <BirdsEye />
+        <Spread />
+      </section>
+    </div>
+  );
+};
+
+export default Effect;

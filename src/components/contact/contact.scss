@@ -1,0 +1,37 @@
+#contactContainer {
+    padding: 2% 0 10% 0%;
+
+    h2 {
+        padding: 0% 5% 5% 5%;
+        font-size: 3em;
+        font-style: italic;
+    }
+
+    #info {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 8% 0;
+
+        .contactItem {
+            text-align: center;
+            width: 22%;
+            border: 3px solid rgb(165, 201, 202);
+            border-radius: 30px;
+            padding: 3vh 2px;
+            cursor: pointer;
+
+            &:hover {
+                transform: translate(1px, -1px);
+            }
+
+            &:active {
+                border: 3px solid rgb(255, 231, 14);
+            }
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+}

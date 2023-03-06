@@ -3,17 +3,16 @@ import "./portfolio.scss";
 import { projectData } from "./projectData";
 
 import Project from "./project/project";
-
-//photo
-// import {} from "";
+import Title from "../title/bouncy/title"
 
 const Portfolio = () => {
   return (
-    <div id="portfolioContainer">
+    <article id="portfolioContainer" className="section">
+      <Title title={"過往專案"}/>
       <Project project={projectData.personalWebsite} />
       <Project project={projectData.udb} />
       <Project project={projectData["ud-simulator"]} />
-    </div>
+    </article>
   );
 };
 

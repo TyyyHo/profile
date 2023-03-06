@@ -1,0 +1,37 @@
+#scrollHint {
+    position: absolute;
+    z-index: 10;
+    animation: scroll 2s linear infinite;
+
+    @keyframes scroll {
+        from { transform: translate(-100px, 0);}
+        to { transform: translate(100px, 0);}
+    }
+
+    .svgContainer {
+        text-align: center;
+        
+  
+        svg {
+            width: 80px;
+            height: 80px;
+        }
+
+        .svg {
+            fill: white;
+            fill:black;
+        }
+    }
+
+   p {
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+   }
+   
+}
+
+.hide {
+    opacity: 0;
+    transition: opacity 1.5s;
+}

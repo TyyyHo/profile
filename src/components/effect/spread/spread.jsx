@@ -2,17 +2,20 @@ import React, { useEffect, useRef, useState } from "react";
 import anime from "animejs/lib/anime.es.js";
 import "./spread.scss";
 
+import ClickHint from "../../hint/click/clickHint";
+
 const Spread = () => {
+  const [showHint, setHint] = useState(true);
   const [grid, setGrid] = useState({ columns: 0, rows: 0, total: 1 });
   const previousColor = useRef(0);
   const { total } = grid;
 
   function initGrid() {
     const columns = Math.floor(
-      document.getElementById("spread").clientWidth / 50
+      document.getElementById("spread").clientWidth / 40
     );
     const rows = Math.floor(
-      document.getElementById("spread").clientHeight / 50
+      document.getElementById("spread").clientHeight / 40
     );
 
     setGrid({
@@ -22,50 +25,60 @@ const Spread = () => {
     });
   }
 
+  //觸發動畫
   function tiggerSpread(e) {
     const id = e.target.id;
     const { columns, rows } = grid;
-    let color1 = "hsl(0, 0%, 100%)";
-    let color2 = "hsl(0, 0%, 100%)";
     //顏色選項
     const option = [
-      [9, 64],
-      [39, 59],
-      [60, 69],
+      [10, 64],
+      [30, 60],
+      [55, 65],
       [120, 45],
-      [200, 50],
-      [180, 50],
-      [300, 40],
+      [210, 50],
+      [170, 50],
+      [300, 50],
     ];
 
     //取隨機不重複數字，不重複時紀錄在Ref
-    let randomNum = Math.floor(Math.random() * option.length);
-    while (randomNum === previousColor.current) {
+    let randomNum;
+    while (randomNum === undefined || randomNum === previousColor.current) {
       randomNum = Math.floor(Math.random() * option.length);
     }
     previousColor.current = randomNum;
 
     //更新顏色
-    color1 = `hsl(${option[randomNum][0]}, 100%, ${option[randomNum][1]-10}%)`;
-    color2 = `hsl(${option[randomNum][0]}, 100%, ${option[randomNum][1]}%)`;
+    let color1 = `hsl(${option[randomNum][0]}, 90%, ${
+      option[randomNum][1] - 18
+    }%)`;
+    let color2 = `hsl(${option[randomNum][0]}, 90%, ${
+      option[randomNum][1] - 15
+    }%)`;
+    let color3 = `hsl(${option[randomNum][0]}, 100%, ${option[randomNum][1]}%)`;
 
     //動畫
     anime({
       targets: ".gridItem",
       backgroundColor: [
-        { value: color1, easing: "easeOutSine", duration: 500 },
-        { value: color2, easing: "easeInOutQuad", duration: 1000 },
+        { value: color1, easing: "easeOutSine", duration: 200 },
+        { value: color2, easing: "easeOutSine", duration: 300 },
+        { value: color3, easing: "easeOutSine", duration: 1200 },
       ],
       delay: anime.stagger(80, { grid: [columns, rows], from: id }),
     });
+
+    //呼叫過fn後提示消失
+    setHint(false);
   }
 
+  //初始化網格
   useEffect(() => {
     initGrid();
   }, []);
 
   return (
     <div id="spread">
+      <ClickHint isShow={showHint} text={"Click"} />
       {[...Array(total)].map((item, index) => {
         return (
           <div

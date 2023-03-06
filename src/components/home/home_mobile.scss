@@ -1,0 +1,17 @@
+//RWD (width is higher than 412, lower than 1280)
+@media only screen and (max-width: 1250px) {
+
+    #homeContainer {
+
+        .paragraph {
+            top: 40%;
+            left: 5%;
+        }
+    }
+}
+
+
+//RWD (width is lower than 412)
+@media only screen and (max-width: 420px) {
+
+}

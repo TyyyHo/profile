@@ -1,26 +1,140 @@
 // dark theme
-$darkTheme_background: rgb(15, 15, 20);
-$darkTheme_secondary: rgb(34, 41, 41);
-$darkTheme_font: rgb(255, 255, 255);
-$darkTheme_border: rgb(165, 201, 202);
+$dark_background: rgb(15, 15, 20);
+$dark_font: rgb(255, 255, 255);
+$dark_border: rgb(165, 201, 202);
 
 
 // light theme
-$lightTheme_background: rgb(255, 251, 251);
-$lightTheme_secondary: rgb(230, 224, 224);
-$lightTheme_font: rgb(12, 1, 1);
-$lightTheme_border: rgb(165, 201, 202);
+$light_background: rgb(240, 240, 240);
+$light_font: rgb(12, 1, 1);
+$light_border: rgb(165, 201, 202);
 
 
 // -----------------------------------------
 
 .darkTheme {
-    background-color: $darkTheme_background;
-    color: $darkTheme_font;
+    background-color: $dark_background;
+    color: $dark_font;
+    transition: background-color 1.5s, color 1.5s;
+
+    #naviContainer {
+        background-color: $dark_background;
+        transition: background-color 1.5s;
+    }
+
+    .fading {
+
+        text {
+            fill: $dark_background;
+            stroke: $dark_font;
+        }
+    }
+
+    .planet {
+
+        .orbit {
+            border: 3px solid rgba(256, 256, 256, 0.1);
+
+            .satellite {
+                // background-color: $dark_background;
+                transition: background-color 1.5s;
+            }
+        }
+    }
+
+    #birdsEyeContainer {
+
+        #img {
+            border: 2px solid wheat;
+        }
+    }
+
+    #projectContainer {
+
+        .urlItem {
+            a {
+                color: $dark_font;
+                transition: color 1.5s;
+
+                &:hover {
+                    color: rgb(253, 253, 181);
+                }
+            }
+        }
+    }
+
+    #themeSwitcher {
+        #tick {
+    
+            path {
+                stroke: white;
+            }
+        }
+    }
+
 }
 
 
 .lightTheme {
-    background-color: $darkTheme_background;
-    color: $darkTheme_font;
+    background-color: $light_background;
+    color: $light_font;
+    transition: background-color 1.5s, color 1.5s;
+
+    #naviContainer {
+        background-color: $light_background;
+        transition: background-color 1.5s;
+    }
+
+    .fading {
+
+        text {
+            fill: $light_background;
+            stroke: $light_font;
+            transition: fill 2s, stroke 2s;
+        }
+    }
+
+    .planet {
+
+        .orbit {
+            border: 3px solid rgba(0, 0, 0, 0.1);
+
+            .satellite {
+                // background-color: $light_background;
+                transition: background-color 1.5s;
+            }
+        }
+    }
+
+    #birdsEyeContainer {
+
+        #img {
+            border: 3px solid rgb(230, 141, 26);
+        }
+    }
+
+    #projectContainer {
+
+        .urlItem {
+            a {
+                color: $light_font;
+                transition: color 1.5s;
+
+                &:hover {
+                    color: $light_border;
+                }
+            }
+        }
+    }
+
+    #themeSwitcher {
+        #tick {
+    
+            path {
+                stroke: black;
+                transition: stroke 0s;
+            }
+        }
+    }
+
 }

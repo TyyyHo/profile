@@ -1,0 +1,20 @@
+#toTop {
+    position: fixed;
+    right: 3%;
+    bottom: 3%;
+    cursor: pointer;
+    z-index: 100;
+    border: 2px solid rgb(185, 185, 185);
+    border-radius: 50%;
+    display: flex;
+    background-color: rgb(63, 63, 63);
+    width: 4vh;
+    height: 4vh;
+    box-sizing: border-box;
+    z-index: 100;
+
+    img {
+        // padding: 8px;
+        transform: scale(0.8);
+    }
+}

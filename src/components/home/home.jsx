@@ -1,13 +1,21 @@
-import React from 'react'
-import Planet from "./planet/planet"
-import "./home.scss"
+import React from "react";
+import "./home.scss";
+import "./home_mobile.scss";
+
+import Planet from "./planet/planet";
+import Fading from "../title/fading/fading";
 
 const Home = () => {
   return (
-    <div id='homeContainer'>
-        <Planet/>
+    <div id="homeContainer">
+      <Planet />
+      <div className="paragraph">
+        <Fading text={"Welcome!"} />
+        <h2 className="trigger">My name is Tyler.</h2>
+        <p>Frontend Developer</p>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

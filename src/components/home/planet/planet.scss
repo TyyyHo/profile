@@ -1,84 +1,115 @@
 .planet {
     position: relative;
-    top: -700px;
-    right: -35%;
+    top: -600px;
+    right: -30%;
     width: 1600px;
     height: 1600px;
+    // border: 6px solid red;
 
-    .earth {
-        z-index: 10;
+    $earth-left: 60%;
+    $earth-top: 58%;
+    .fakeEarth {
         cursor: pointer;
         position: absolute;
-        left: 60%;
-        top: 56%;
-        width: 24%;
+        left: $earth-left;
+        top: $earth-top;
+        width: 20%;
+        height: 20%;
+        z-index: 20;
+        border-radius: 50%;
+    }
+
+    .earth {
+        z-index: 5;
+        cursor: pointer;
+        position: absolute;
+        left: $earth-left;
+        top: $earth-top;
+        width: 20%;
+        animation: earthLayer 6s infinite linear;
 
         img {
             width: 100%;
         }
     }
 
+
     .orbit {
         position: absolute;
-        padding: 50px;
         border-radius: 50%;
-        border: 6px solid rgba(256, 256, 256, 0.2);
+        // border: 2px solid rgba(256, 256, 256, 0.1);
+        box-sizing: border-box;
 
         .satellite {
-            width: 75px;
             position: absolute;
+            border: 1px solid rgb(0, 0, 0, 0);
+            padding: 5px;
+            border-radius: 45%;
         }
+
     }
 
     .path1 {
         animation: spin 6s infinite linear;
-        width: 75%;
-        height: 75%;
-        top: 30%;
-        left: 30%;
+        width: 70%;
+        height: 70%;
+        top: 34%;
+        left: 35%;
+        z-index: 5;
 
         .satellite {
+            width: 5%;
             animation: satellite-spin 6s infinite linear;
-            left: 11%;
+            left: 12%;
             top: 11%;
         }
     }
 
     .path2 {
         animation: spin 8s infinite linear;
+        width: 3.33%;
         width: 105%;
         height: 105%;
-        top: 15%;
-        left: 15%;
+        top: 17%;
+        left: 17.5%;
+        z-index: 4;
 
         .satellite {
+            width: 3.6%;
             animation: satellite-spin 8s infinite linear;
-            left: 12.5%;
+            left: 13.5%;
             top: 12%;
         }
     }
 
     .path3 {
         animation: spin 10s infinite linear;
-        width: 135%;
-        height: 135%;
+        width: 140%;
+        height: 140%;
+        z-index: 3;
 
         .satellite {
+            width: 2.5%;
             animation: satellite-spin 10s infinite linear;
-            left: 16%;
-            top: 9%;
+            left: 19%;
+            top: 8%;
         }
     }
 
     @keyframes spin {
-        from {transform: scaleY(0.25) rotate(0deg);}
-        to {transform: scaleY(0.25) rotate(360deg);}
+        from { transform: scaleY(0.2) rotate(0deg);}
+        to { transform: scaleY(0.2) rotate(360deg); }
     }
 
     @keyframes satellite-spin {
-        from {transform: rotate(0deg) scaleY(4) scale(1);}
-        to {transform: rotate(-360deg) scaleY(4) scale(1);}
+        from { transform: rotate(0deg) scaleY(5);}
+        to { transform: rotate(-360deg) scaleY(5); }
     }
 
+    @keyframes earthLayer {
+        0% { z-index: 10;}
+        50% { z-index: 0;}
+        100% { z-index: 4;}
+    }
 
 }

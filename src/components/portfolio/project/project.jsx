@@ -5,46 +5,53 @@ import "./project.scss";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 
-import myimg from "../../../assets/img/portfolio/udb/1.webp";
-
 const Project = ({ project }) => {
   return (
     <section id="projectContainer">
-      <h2>{project.title}</h2>
-      <p>{project.description}</p>
+      <section className="carouselContainer">
+        <Carousel
+          swipeScrollTolerance={80}
+          showThumbs={false}
+          emulateTouch={true}
+          showStatus={false}
+        >
+          {project.image.map((item, index) => {
+            return <img key={index} src={`./src/assets/img/portfolio/${item}`} loading="lazy" alt="photo" />;
+          })}
+        </Carousel>
+      </section>
 
-      <h4>Features</h4>
-      <ul>
-        {project.feature.map((item, index) => {
-          return <li key={index}>{item}</li>;
-        })}
-      </ul>
+      <section className="paragraph">
+        <h2>{project.title}</h2>
+        <p>{project.description}</p>
 
-      <h4>Tech</h4>
-      <ul>
-        {project.tech.map((item, index) => {
-          return <li key={index}>{item}</li>;
-        })}
-      </ul>
+        <h4>Features</h4>
+        <ul>
+          {project.feature.map((item, index) => {
+            return <li key={index}>-  {item}</li>;
+          })}
+        </ul>
 
-      <h4>Update</h4>
-      <ul>
-        {project.update.map((item, index) => {
-          return <li key={index}>{item}</li>;
-        })}
-      </ul>
+        <h4>Tech</h4>
+        <ul>
+          {project.tech.map((item, index) => {
+            return <li key={index}>-  {item}</li>;
+          })}
+        </ul>
 
-      <Carousel
-        className="carousel"
-        swipeScrollTolerance={80}
-        showThumbs={false}
-        emulateTouch={true}
-        showStatus={false}
-      >
-        {project.image.map((item, index) => {
-          return <img  key={index} src={`./src/assets/img/portfolio/${item}`} loading="lazy" alt="photo" />;
-        })}
-      </Carousel>
+        <h4>{project.update.length === 0 ? "" : "Update"}</h4>
+        <ul>
+          {project.update.map((item, index) => {
+            return <li key={index}>-  {item}</li>;
+          })}
+        </ul>
+
+        <h4>Url</h4>
+        <ul>
+          <li className="urlItem">網站連結： <a href={project.url} target="_blank">{project.url}</a></li>
+          <li className="urlItem">Github： <a href={project.github} target="_blank">{project.github}</a></li>
+        </ul>
+      </section>
     </section>
   );
 };

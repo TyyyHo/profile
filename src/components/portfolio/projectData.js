@@ -6,13 +6,13 @@ export const projectData = {
     feature: ["一鍵切換網站配色", "一些酷酷的特效", "RWD"],
     tech: [
       "React + vite建立專案",
-      "使用預處理器SASS編輯style",
+      "使用預處理器SASS編輯樣式",
       "使用animejs建立動畫特效",
       "圖片設定lazy loading，提高畫面載入速度",
       "使用Sqoosh無損壓縮圖片，優化使用者體驗",
     ],
-    update: ["根據使用者回饋新增及修改資料"],
-    image: ["personal_website/1.webp", "personal_website/2.webp", "personal_website/3.webp"],
+    update: [],
+    image: ["personal_web/1.webp", "personal_web/2.webp", "personal_web/3.webp"],
     url: "https://tyyyho.github.io/Personal_website/",
     github: "https://github.com/TyyyHo/Personal_website",
   },
@@ -23,7 +23,7 @@ export const projectData = {
     feature: ["攻略彙整", "技能篩選器", "一鍵切換技能中英文名稱", "RWD"],
     tech: [
       "React cli建立專案",
-      "使用預處理器SASS編輯style",
+      "使用預處理器SASS編輯樣式",
       "採用React Router來進行路由設定",
       "React.lazy對未立即用到的頁面進行JS檔案拆分以及緩讀取，提高初次載入速度",
       "圖片設定lazy loading，提高畫面載入速度",
@@ -46,6 +46,7 @@ export const projectData = {
     ],
     tech: [
       "React cli建立專案",
+      "使用預處理器SASS編輯樣式",
       "設計一鍵匯入/匯出功能，將核心狀態編寫為字串型態，再透過URI編碼將字串轉為瀏覽器網址列可接收的字元，方便使用者從網址列直接匯入",
       "因背景圖片較大，壓縮後仍可能影響使用者體驗，加入Loading page來優化",
       "使用Sqoosh無損壓縮圖片，優化使用者體驗",

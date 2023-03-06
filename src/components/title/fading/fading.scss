@@ -1,0 +1,33 @@
+.fading {
+
+    svg {
+        width: 500px;
+        stroke-dashoffset: 1200px;
+        stroke-dasharray: 1200px;
+        -moz-animation: draw 12s ease-in infinite;
+        -webkit-animation: draw 12s ease-in infinite;
+        animation: draw 12s ease-in infinite;
+        font-size: 6em;
+
+        text {
+            fill: rgb(15, 15, 20);
+            stroke: white;
+            stroke-width: 2px;
+        }
+    }
+
+    @keyframes draw {
+        5% {
+            stroke-dashoffset: 1200px;
+        }
+
+        70% {
+            stroke-dashoffset: 0;
+        }
+
+        100% {
+            stroke-dashoffset: 0;
+        }
+    }
+
+}
