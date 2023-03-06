@@ -1,4 +1,4 @@
-.planet {
+#planet {
     position: relative;
     top: -600px;
     right: -30%;
@@ -20,13 +20,16 @@
     }
 
     .earth {
-        z-index: 5;
+        z-index: 10;
         cursor: pointer;
         position: absolute;
         left: $earth-left;
         top: $earth-top;
         width: 20%;
-        animation: earthLayer 6s infinite linear;
+        animation: earthLayer 6s infinite steps(1, start);
+        -webkit-animation: earthLayer 6s infinite steps(1, start);
+        -moz-animation: earthLayer 6s infinite steps(1, start);
+        -o-animation: earthLayer 6s infinite steps(1, start);
 
         img {
             width: 100%;
@@ -107,9 +110,8 @@
     }
 
     @keyframes earthLayer {
-        0% { z-index: 10;}
-        50% { z-index: 0;}
-        100% { z-index: 4;}
+        60% { z-index: 10;}
+        68% { z-index: 0;}
     }
 
 }

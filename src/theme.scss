@@ -19,7 +19,16 @@ $light_border: rgb(165, 201, 202);
 
     #naviContainer {
         background-color: $dark_background;
-        transition: background-color 1.5s;
+        transition:opacity 1s, background-color 1.5s;
+    }
+
+    .notOnTop {
+        opacity: 0;
+    
+        &:hover {
+            opacity: 1;
+            transition: opacity 1.5s;
+        }
     }
 
     .fading {
@@ -30,15 +39,10 @@ $light_border: rgb(165, 201, 202);
         }
     }
 
-    .planet {
+    #planet {
 
         .orbit {
             border: 3px solid rgba(256, 256, 256, 0.1);
-
-            .satellite {
-                // background-color: $dark_background;
-                transition: background-color 1.5s;
-            }
         }
     }
 
@@ -59,15 +63,30 @@ $light_border: rgb(165, 201, 202);
                 &:hover {
                     color: rgb(253, 253, 181);
                 }
+
+                &::before {
+                    background-color: $light_background;
+                    color: $light_font;
+                }
             }
         }
     }
 
     #themeSwitcher {
         #tick {
-    
+
             path {
                 stroke: white;
+            }
+        }
+    }
+
+    #contactContainer {
+
+        #info {
+
+            svg {
+                fill: yellow;
             }
         }
     }
@@ -82,7 +101,16 @@ $light_border: rgb(165, 201, 202);
 
     #naviContainer {
         background-color: $light_background;
-        transition: background-color 1.5s;
+        transition:opacity 1s, background-color 1.5s;
+    }
+
+    .notOnTop {
+        opacity: 0;
+    
+        &:hover {
+            opacity: 1;
+            transition: opacity 1.5s;
+        }
     }
 
     .fading {
@@ -94,15 +122,10 @@ $light_border: rgb(165, 201, 202);
         }
     }
 
-    .planet {
+    #planet {
 
         .orbit {
             border: 3px solid rgba(0, 0, 0, 0.1);
-
-            .satellite {
-                // background-color: $light_background;
-                transition: background-color 1.5s;
-            }
         }
     }
 
@@ -123,16 +146,31 @@ $light_border: rgb(165, 201, 202);
                 &:hover {
                     color: $light_border;
                 }
+
+                &::before {
+                    background-color: $dark_background;
+                    color: $dark_font;
+                }
             }
         }
     }
 
     #themeSwitcher {
         #tick {
-    
+
             path {
                 stroke: black;
                 transition: stroke 0s;
+            }
+        }
+    }
+
+    #contactContainer {
+
+        #info {
+
+            svg {
+                fill: rgb(52, 201, 209);
             }
         }
     }

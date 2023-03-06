@@ -1,5 +1,6 @@
 import React from "react";
 import "./project.scss";
+import "./project_mobile.scss";
 
 // 輪播
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
@@ -28,28 +29,28 @@ const Project = ({ project }) => {
         <h4>Features</h4>
         <ul>
           {project.feature.map((item, index) => {
-            return <li key={index}>-  {item}</li>;
+            return <li key={index}>{item}</li>;
           })}
         </ul>
 
         <h4>Tech</h4>
         <ul>
           {project.tech.map((item, index) => {
-            return <li key={index}>-  {item}</li>;
+            return <li key={index}>{item}</li>;
           })}
         </ul>
 
         <h4>{project.update.length === 0 ? "" : "Update"}</h4>
         <ul>
           {project.update.map((item, index) => {
-            return <li key={index}>-  {item}</li>;
+            return <li key={index}>{item}</li>;
           })}
         </ul>
 
         <h4>Url</h4>
         <ul>
-          <li className="urlItem">網站連結： <a href={project.url} target="_blank">{project.url}</a></li>
-          <li className="urlItem">Github： <a href={project.github} target="_blank">{project.github}</a></li>
+          <li className="urlItem">網站連結： <a href={project.url} target="_blank" hovertext={project.url}>Link</a></li>
+          <li className="urlItem">Github： <a href={project.github} target="_blank" hovertext={project.github}>Link</a></li>
         </ul>
       </section>
     </section>

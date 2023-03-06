@@ -1,0 +1,18 @@
+//RWD (width is higher than 1280, lower than 1800)
+@media (max-width: 1800px) {}
+
+//RWD (width is higher than 412, lower than 1280)
+@media (max-width: 1250px) {
+    #spread {
+        width: 86%;
+        height: 300px;
+        margin: 0 auto 10% auto;
+
+        #clickHint {
+            left: 42%;
+        }
+    }
+}
+
+//RWD (width is lower than 412)
+@media (max-width: 420px) {}

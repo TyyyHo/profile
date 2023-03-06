@@ -32,6 +32,7 @@
         display: flex;
         justify-content: space-around;
 
+
         .option {
             font-style: italic;
             font-weight: 600;
@@ -47,12 +48,13 @@
 
 }
 
-.notOnTop {
+.abc {
     opacity: 0;
-    transition: opacity 0.5s;
+    transition: opacity 1s ease-in;
+    transition: background-color 1.5s;
 
     &:hover {
         opacity: 1;
-        transition: opacity 1.5s;
+        transition: opacity 1.5s ease-in;
     }
 }

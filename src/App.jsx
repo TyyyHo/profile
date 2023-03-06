@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.scss";
 import "./theme.scss";
+import { isMobileDevice } from "./components/hint/isMobile/isMobile";
 
 // components
 import Navigation from "./components/navigation/navigation";
@@ -16,6 +17,7 @@ function App() {
   const [theme, setTheme] = useState(true);
   const [onTop, setOnTop] = useState(true);
   const [finish, setLoading] = useState(false);
+  const isMobile = isMobileDevice();
 
   (function lazyLoad() {
     //6秒後進入主頁面
@@ -42,9 +44,9 @@ function App() {
       <Loading finish={finish} />
       <ThemeSwitcher theme={theme} setTheme={setTheme} />
       <ToTop onTop={onTop} />
-      <Navigation onTop={onTop} />
+      <Navigation onTop={onTop} isMobile={isMobile} />
       <Home />
-      <Effect />
+      <Effect isMobile={isMobile} />
       <Portfolio />
       <Contact />
     </div>

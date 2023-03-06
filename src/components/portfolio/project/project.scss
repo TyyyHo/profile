@@ -47,16 +47,37 @@
 
         li {
             line-height: 1.3em;
-            list-style-type: none;
         }
 
         .urlItem {
             list-style-type: none;
+            position: relative;
             
             a {
                 text-decoration: none;
+
+                &::before {
+                    content: attr(hovertext);
+                    visibility: hidden;
+                    text-align: center;
+                    border-radius: 5px;
+                    padding: 5px 10px;
+                    position: absolute;
+                    z-index: 2;
+                    left: -5%;
+                    top: 110%;
+                }
+
+                &:hover::before {
+                    opacity: 0.8;
+                    visibility: visible;
+                  }
             }
+
+
         }
+
+
     }
 
 }

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import anime from "animejs/lib/anime.es.js";
 import "./spread.scss";
+import "./spread_mobile.scss";
 
 import ClickHint from "../../hint/click/clickHint";
 
@@ -12,10 +13,10 @@ const Spread = () => {
 
   function initGrid() {
     const columns = Math.floor(
-      document.getElementById("spread").clientWidth / 40
+      document.getElementById("spread").clientWidth / 30
     );
     const rows = Math.floor(
-      document.getElementById("spread").clientHeight / 40
+      document.getElementById("spread").clientHeight / 30
     );
 
     setGrid({
@@ -60,9 +61,9 @@ const Spread = () => {
     anime({
       targets: ".gridItem",
       backgroundColor: [
-        { value: color1, easing: "easeOutSine", duration: 200 },
-        { value: color2, easing: "easeOutSine", duration: 300 },
-        { value: color3, easing: "easeOutSine", duration: 1200 },
+        { value: color1, easing: "easeOutSine", duration: 80 },
+        { value: color2, easing: "easeOutSine", duration: 100 },
+        { value: color3, easing: "easeOutSine", duration: 100 },
       ],
       delay: anime.stagger(80, { grid: [columns, rows], from: id }),
     });

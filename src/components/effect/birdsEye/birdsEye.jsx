@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import "./birdsEye.scss";
-import { isMobileDevice } from "../../hint/isMobile/isMobile";
+import "./birdsEye_mobile.scss";
 
 import ScrollHint from "../../hint/scroll/scrollHint";
 import ClickHint from "../../hint/click/clickHint";
 
-const BirdsEye = () => {
+const BirdsEye = ({isMobile}) => {
   const [showHint, setHint] = useState(true);
-  const isMobile = isMobileDevice();
 
   function handleMouseMove(e) {
     const ele = document.getElementById("birdsEyeContainer");
@@ -32,14 +31,13 @@ const BirdsEye = () => {
 
   return (
     <div id="birdsEyeContainer">
+      {/* 根據裝置類型決定要渲染的組件 */}
       {
         {
           true: <ClickHint isShow={showHint} text={"Click"} />,
           false: <ScrollHint isShow={showHint} text={"Scroll"} />,
         }[isMobile]
       }
-
-      {/* <ScrollHint isShow={showHint} text={"Scroll"} /> */}
       <div
         className="wrapper"
         onClick={handleMouseMove}

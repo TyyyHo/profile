@@ -51,7 +51,7 @@ const Planet = () => {
   }, []);
 
   return (
-    <div className="planet">
+    <div id="planet">
       <div className="fakeEarth" onClick={pickImage}></div>
       <div className="earth">
         <img src={earth} alt="earth" />

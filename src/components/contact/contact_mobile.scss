@@ -1,0 +1,38 @@
+//RWD (width is higher than 1280, lower than 1800)
+@media (max-width: 1800px) {}
+
+//RWD (width is higher than 412, lower than 1280)
+@media (max-width: 1250px) {
+    #contactContainer {
+    
+        #info {
+            flex-direction: column;
+    
+            .contactItem {
+                width: 50%;
+                margin: 3% 0;
+                padding: 3vh 0;
+            }
+        }
+    }
+}
+
+//RWD (width is lower than 412)
+@media (max-width: 420px) {
+    #contactContainer {
+
+        p {
+            font-size: 11px;
+            font-weight: 600;
+        }
+    
+        #info {
+    
+            .contactItem {
+                width: 70%;
+                margin: 3% 0;
+                padding: 5% 0;
+            }
+        }
+    }
+}

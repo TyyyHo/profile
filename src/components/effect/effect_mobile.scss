@@ -1,0 +1,16 @@
+//RWD (width is higher than 1280, lower than 1800)
+@media (max-width: 1800px) {}
+
+//RWD (width is higher than 412, lower than 1280)
+@media (max-width: 1250px) {
+
+    #effect {
+
+        #effectContainer {
+            flex-direction: column;
+        }
+    }
+}
+
+//RWD (width is lower than 412)
+@media (max-width: 420px) {}

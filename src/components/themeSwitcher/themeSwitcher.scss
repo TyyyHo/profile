@@ -2,14 +2,15 @@
     position: fixed;
     right: 3%;
     bottom: 10%;
+    z-index: 100;
+    border: 2px solid rgb(185, 185, 185);
+    box-sizing: border-box;
+    border-radius: 50%;
     width: 4vh;
     height: 4vh;
-    border: 2px solid rgb(185, 185, 185);
-    border-radius: 50%;
-    box-sizing: border-box;
-    padding: 2px;
     cursor: pointer;
-    z-index: 100;
+    padding: 2px;
+
 
     div {
         width: 100%;
