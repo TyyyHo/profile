@@ -1,5 +1,5 @@
 export const projectData = {
-  personalWebsite: {
+  personalWeb: {
     id: "personal_website",
     title: "個人網站",
     description: "SPA個人網站。",
@@ -12,7 +12,7 @@ export const projectData = {
       "使用Sqoosh無損壓縮圖片，優化使用者體驗",
     ],
     update: [],
-    image: ["personal_web/1.webp", "personal_web/2.webp", "personal_web/3.webp"],
+    image: ["web1", "web2", "web3"],
     url: "https://tyyyho.github.io/Personal_website/",
     github: "https://github.com/TyyyHo/Personal_website",
   },

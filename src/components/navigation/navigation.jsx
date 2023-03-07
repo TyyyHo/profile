@@ -1,6 +1,9 @@
 import "./navigation.scss";
 import "./navigation_mobile.scss";
 
+//photo
+import logo from "/src/assets/img/logo/owl.webp";
+
 const Navigation = ({ onTop, isMobile }) => {
   function jumpTo(id, block) {
     document.getElementById(id).scrollIntoView({ behavior: "smooth", block: block });
@@ -14,7 +17,7 @@ const Navigation = ({ onTop, isMobile }) => {
   return (
     <nav id="naviContainer" className={isNaviShow() ? "show" : "notOnTop"}>
       <button className="logo" onClick={() => jumpTo("homeContainer")}>
-        <img src="/src/assets/img/logo/owl.webp" alt="logo" />
+        <img src={logo} alt="logo" />
       </button>
       <div className="btnContainer">
         <button className="option" onClick={() => jumpTo("effect", "start")}>

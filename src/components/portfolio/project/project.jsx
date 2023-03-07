@@ -6,7 +6,8 @@ import "./project_mobile.scss";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 
-const Project = ({ project }) => {
+const Project = ({ project, photo }) => {
+
   return (
     <section id="projectContainer">
       <section className="carouselContainer">
@@ -17,7 +18,8 @@ const Project = ({ project }) => {
           showStatus={false}
         >
           {project.image.map((item, index) => {
-            return <img key={index} src={`./src/assets/img/portfolio/${item}`} loading="lazy" alt="photo" />;
+            // return <img key={index} src={`../src/assets/img/portfolio/${item}`} loading="lazy" alt="photo" />;
+            return <img key={index} src={photo[index]} loading="lazy" alt="photo" />;
           })}
         </Carousel>
       </section>

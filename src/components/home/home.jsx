@@ -12,7 +12,7 @@ const Home = () => {
       <div className="paragraph">
         <Fading text={"Welcome!"} />
         <h2 className="trigger">My name is Tyler.</h2>
-        <p>Frontend Developer</p>
+        <p>Front-end Developer</p>
       </div>
     </div>
   );
