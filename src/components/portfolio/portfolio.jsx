@@ -19,7 +19,7 @@ import simulator3 from "/src/assets/img/portfolio/ud-simulator/3.webp";
 const Portfolio = () => {
   return (
     <article id="portfolioContainer" className="section">
-      <Title title={"過往專案"} />
+      <Title title={"專案"} />
       <Project project={projectData.personalWeb} photo={[web1, web2, web3]} />
       <Project project={projectData.udb} photo={[udb1, udb2, udb3]} />
       <Project project={projectData["ud-simulator"]} photo={[simulator1, simulator2, simulator3]} />

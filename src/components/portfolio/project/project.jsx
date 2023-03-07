@@ -17,9 +17,8 @@ const Project = ({ project, photo }) => {
           emulateTouch={true}
           showStatus={false}
         >
-          {project.image.map((item, index) => {
-            // return <img key={index} src={`../src/assets/img/portfolio/${item}`} loading="lazy" alt="photo" />;
-            return <img key={index} src={photo[index]} loading="lazy" alt="photo" />;
+          {photo.map((item, index) => {
+            return <img key={index} src={item} loading="lazy" alt="photo" />;
           })}
         </Carousel>
       </section>

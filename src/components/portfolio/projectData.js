@@ -13,8 +13,8 @@ export const projectData = {
     ],
     update: [],
     image: ["web1", "web2", "web3"],
-    url: "https://tyyyho.github.io/Personal_website/",
-    github: "https://github.com/TyyyHo/Personal_website",
+    url: "https://tyyyho.github.io/personal_web/",
+    github: "https://github.com/TyyyHo/personal_web",
   },
   udb: {
     id: "udb",
