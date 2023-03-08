@@ -5,8 +5,9 @@ import "./birdsEye_mobile.scss";
 import ScrollHint from "../../hint/scroll/scrollHint";
 import ClickHint from "../../hint/click/clickHint";
 
-const BirdsEye = ({isMobile}) => {
-  const [showHint, setHint] = useState(true);
+const BirdsEye = ({ isMobile }) => {
+  const [showClick, setClick] = useState(true);
+  const [showScroll, setScroll] = useState(true);
 
   function handleMouseMove(e) {
     const ele = document.getElementById("birdsEyeContainer");
@@ -20,7 +21,8 @@ const BirdsEye = ({isMobile}) => {
     document.documentElement.style.setProperty("--y", -y / 2 + "px");
 
     //呼叫過fn後提示消失
-    setHint(false);
+    setClick(false);
+    setScroll(false);
   }
 
   const handleMouseLeave = () => {
@@ -30,20 +32,21 @@ const BirdsEye = ({isMobile}) => {
   };
 
   return (
-    <div id="birdsEyeContainer">
+    <div
+      id="birdsEyeContainer"
+      onClick={handleMouseMove}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+    >
+      
       {/* 根據裝置類型決定要渲染的組件 */}
       {
         {
-          true: <ClickHint isShow={showHint} text={"Click"} />,
-          false: <ScrollHint isShow={showHint} text={"Scroll"} />,
+          true: <ClickHint isShow={showClick} text={"click"} />,
+          false: <ScrollHint isShow={showScroll} text={"Scroll"} />,
         }[isMobile]
       }
-      <div
-        className="wrapper"
-        onClick={handleMouseMove}
-        onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave}
-      >
+      <div className="wrapper">
         <div id="img"></div>
       </div>
     </div>

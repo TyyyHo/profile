@@ -1,21 +1,16 @@
 #toTop {
     position: fixed;
-    right: 3%;
-    bottom: 3%;
-    cursor: pointer;
-    z-index: 100;
-    width: 4vh;
-    height: 4vh;
+    right: 60px;
+    bottom: 30px;
     background-color: rgb(63, 63, 63);
     border: 2px solid rgb(185, 185, 185);
-    box-sizing: border-box;
     border-radius: 50%;
+    width: 4vh;
+    height: 4vh;
+    box-sizing: border-box;
+    z-index: 100;
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-
-
-    img {
-        transform: scale(0.8);
-    }
 }

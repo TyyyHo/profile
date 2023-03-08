@@ -7,16 +7,10 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from "react-responsive-carousel";
 
 const Project = ({ project, photo }) => {
-
   return (
     <section id="projectContainer">
       <section className="carouselContainer">
-        <Carousel
-          swipeScrollTolerance={80}
-          showThumbs={false}
-          emulateTouch={true}
-          showStatus={false}
-        >
+        <Carousel showThumbs={false} emulateTouch={true} showStatus={false}>
           {photo.map((item, index) => {
             return <img key={index} src={item} loading="lazy" alt="photo" />;
           })}
@@ -50,8 +44,18 @@ const Project = ({ project, photo }) => {
 
         <h4>Url</h4>
         <ul>
-          <li className="urlItem">網站連結： <a href={project.url} target="_blank" hovertext={project.url}>Link</a></li>
-          <li className="urlItem">Github： <a href={project.github} target="_blank" hovertext={project.github}>Link</a></li>
+          <li className="urlItem">
+            網站連結：
+            <a href={project.url} target="_blank" hovertext={project.url}>
+              Link
+            </a>
+          </li>
+          <li className="urlItem">
+            Github：
+            <a href={project.github} target="_blank" hovertext={project.github}>
+              Link
+            </a>
+          </li>
         </ul>
       </section>
     </section>

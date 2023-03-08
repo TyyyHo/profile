@@ -1,37 +1,47 @@
 #clickHint {
     position: absolute;
-    z-index: 10;
-    $moveRange-x: 2px;
-    $moveRange-y: 12px;
-    @keyframes click {
-        0% { transform: translate(- $moveRange-x, - $moveRange-y);}
-        50% { transform: translate($moveRange-x, $moveRange-y);}
-        100% { transform: translate(- $moveRange-x, - $moveRange-y);}
-    }
+    // z-index: 10;
+    cursor: pointer;
+    color: black;
+    z-index: 1;
 
     .svgContainer {
         text-align: center;
         animation: click 2s linear infinite;
-  
+
+
+        $moveRange-x: 2px;
+        $moveRange-y: 12px;
+
+        @keyframes click {
+            0% {
+                transform: translate(- $moveRange-x, - $moveRange-y);
+            }
+
+            50% {
+                transform: translate($moveRange-x, $moveRange-y);
+            }
+
+            100% {
+                transform: translate(- $moveRange-x, - $moveRange-y);
+            }
+        }
+
         svg {
             width: 80px;
             height: 80px;
         }
-
-        .svg {
-            fill: white;
-        }
     }
 
-   p {
-    margin: 0;
-    text-align: center;
-    font-weight: bold;
-   }
-   
+    p {
+        margin: 0;
+        text-align: center;
+        font-weight: bold;
+    }
+
 }
 
-.hide {
+.hideClick {
     opacity: 0;
     transition: opacity 1.5s;
 }

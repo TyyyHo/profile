@@ -1,28 +1,43 @@
 #themeSwitcher {
     position: fixed;
-    right: 3%;
-    bottom: 10%;
-    z-index: 100;
-    border: 2px solid rgb(185, 185, 185);
-    box-sizing: border-box;
+    right: 60px;
+    bottom: 100px;
+    border: 1px solid rgb(185, 185, 185);
     border-radius: 50%;
     width: 4vh;
     height: 4vh;
+    box-sizing: border-box;
+    z-index: 100;
     cursor: pointer;
-    padding: 2px;
+    padding: 2px 2px;
 
 
-    div {
-        width: 100%;
-        height: 100%;
+    .circle {
+            width: 100%;
+            height: 100%;
+        
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        rect {
+            width: 100%;
+            height: 100%;
+        }
     }
 
     .toDark {
         animation: rotateToDark 1.5s ease-out forwards;
 
         @keyframes rotateToDark {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(-180deg); }
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(-180deg);
+            }
         }
     }
 
@@ -30,8 +45,13 @@
         animation: rotateToLight 1.5s ease-out forwards;
 
         @keyframes rotateToLight {
-            from { transform: rotate(180deg); }
-            to { transform: rotate(360deg); }
+            from {
+                transform: rotate(180deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
         }
     }
 
@@ -40,10 +60,5 @@
         left: 7%;
         position: absolute;
         width: 50%;
-
-        path {
-            stroke: white;
-            stroke: black;
-        }
     }
 }

@@ -5,7 +5,7 @@ import { ReactComponent as ScrollImg } from "../../../assets/img/hint/tap.svg";
 
 const ScrollHint = ({ isShow, text }) => {
   return (
-    <div id="scrollHint" className={isShow ? "" : "hide"}>
+    <div id="scrollHint" className={isShow ? "" : "hideScroll"}>
       <div className="svgContainer">
         <ScrollImg />
       </div>

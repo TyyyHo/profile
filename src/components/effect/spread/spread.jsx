@@ -78,17 +78,10 @@ const Spread = () => {
   }, []);
 
   return (
-    <div id="spread">
+    <div id="spread" onClick={tiggerSpread}>
       <ClickHint isShow={showHint} text={"Click"} />
       {[...Array(total)].map((item, index) => {
-        return (
-          <div
-            id={index}
-            className="gridItem"
-            key={index}
-            onClick={tiggerSpread}
-          ></div>
-        );
+        return <div id={index} className="gridItem" key={index}></div>;
       })}
     </div>
   );
