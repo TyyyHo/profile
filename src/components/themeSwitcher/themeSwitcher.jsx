@@ -8,14 +8,23 @@ import { ReactComponent as Tick } from "/src/assets/img/themeSwitcher/tick.svg";
 const ThemeSwitcher = ({ theme, setTheme }) => {
   const firstArrive = useRef(true);
 
+  function triggerSwitch() {
+    let nextTheme = theme === "lightTheme" ? "darkTheme" : "lightTheme";
+    setTheme(nextTheme);
+    firstArrive.current = false;
+    localStorage.setItem("theme", nextTheme);
+  }
+
   function triggerAnimation() {
-    return theme ? "toLight" : "toDark"
+    if (!firstArrive.current) {
+      return theme === "lightTheme" ? "toDark" : "toLight";
+    }
   }
 
   return (
-    <div id="themeSwitcher" onClick={() => { setTheme(!theme); firstArrive.current = false; }}>
-      <div className={`circle ${firstArrive.current ? "" : triggerAnimation()}`}>
-        <Circle/>
+    <div id="themeSwitcher" onClick={triggerSwitch}>
+      <div className={`circle ${triggerAnimation()}`}>
+        <Circle />
       </div>
       <Tick />
     </div>

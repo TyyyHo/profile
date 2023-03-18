@@ -1,8 +1,7 @@
 // dark theme
 $dark_background: rgb(15, 15, 20);
 $dark_font: rgb(255, 255, 255);
-$dark_border: rgb(165, 201, 202);
-
+$dark_border: rgb(53, 248, 255);
 
 // light theme
 $light_background: rgb(240, 240, 240);
@@ -17,14 +16,22 @@ $light_border: rgb(165, 201, 202);
     color: $dark_font;
     transition: background-color 1.5s, color 1.5s;
 
+    .loading {
+        background-color: $dark_background;
+
+        .progress {
+            background-color: $dark_border;
+        }
+    }
+
     #naviContainer {
         background-color: $dark_background;
-        transition:opacity 1s, background-color 1.5s;
+        transition: opacity 1s, background-color 1.5s;
     }
 
     .notOnTop {
         opacity: 0;
-    
+
         &:hover {
             opacity: 1;
             transition: opacity 1.5s;
@@ -58,10 +65,10 @@ $light_border: rgb(165, 201, 202);
         .urlItem {
             a {
                 color: $dark_font;
-                transition: color 1.5s;
+                transition: color 1s;
 
                 &:hover {
-                    color: rgb(253, 253, 181);
+                    color: $dark_border;
                 }
 
                 &::before {
@@ -93,20 +100,30 @@ $light_border: rgb(165, 201, 202);
 
 }
 
+// -----------------------------------------
 
 .lightTheme {
     background-color: $light_background;
     color: $light_font;
     transition: background-color 1.5s, color 1.5s;
 
+    .loading {
+        background-color: $light_background;
+
+        .progress {
+            background-color: $light_border;
+        }
+    }
+
+
     #naviContainer {
         background-color: $light_background;
-        transition:opacity 1s, background-color 1.5s;
+        transition: opacity 1s, background-color 1.5s;
     }
 
     .notOnTop {
         opacity: 0;
-    
+
         &:hover {
             opacity: 1;
             transition: opacity 1.5s;

@@ -33,6 +33,12 @@ function App() {
     }, 8000);
   })();
 
+  //若曾造訪，沿用上次使用的佈景主題；若初次造訪則使用lightTheme
+  useEffect(() => {
+    setTheme(localStorage.getItem("theme") || "lightTheme");
+  });
+
+  //監測toTop是否顯示
   useEffect(() => {
     window.addEventListener("scroll", () => {
       window.scrollY < 300 ? setOnTop(true) : setOnTop(false);
@@ -40,7 +46,7 @@ function App() {
   }, [onTop]);
 
   return (
-    <div className={`App ${theme ? "lightTheme" : "darkTheme"}`}>
+    <div className={`App ${theme}`}>
       <Loading finish={finish} />
       <ThemeSwitcher theme={theme} setTheme={setTheme} />
       <ToTop onTop={onTop} />

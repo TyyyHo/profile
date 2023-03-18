@@ -2,8 +2,8 @@
 
     svg {
         width: 500px;
-        stroke-dashoffset: 1200px;
         stroke-dasharray: 1200px;
+        stroke-dashoffset: 1200px;
         -moz-animation: draw 12s ease-in infinite;
         -webkit-animation: draw 12s ease-in infinite;
         animation: draw 12s ease-in infinite;

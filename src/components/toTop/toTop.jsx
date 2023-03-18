@@ -13,7 +13,7 @@ const ToTop = ({ onTop }) => {
   };
 
   return !onTop ? (
-    <div id="toTop"  onClick={goToTop}>
+    <div id="toTop" onClick={goToTop}>
       <img src={arrow} />
     </div>
   ) : (
