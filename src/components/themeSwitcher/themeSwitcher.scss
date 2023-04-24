@@ -45,6 +45,8 @@
         animation: rotateToLight 1.5s ease-out forwards;
 
         @keyframes rotateToLight {
+            
+
             from {
                 transform: rotate(180deg);
             }
