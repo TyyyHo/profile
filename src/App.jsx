@@ -23,7 +23,6 @@ function App() {
     //6秒後進入主頁面
     window.onload = () => {
       setTimeout(() => {
-        console.log("load");
         setLoading(true);
       }, 4000);
     };
@@ -49,7 +48,6 @@ function App() {
   return (
     <div className={`App ${theme}`}>
       <Loading finish={finish} />
-      {/* <div style={{ width: "500px", height: "500px", backgroundColor: "red" }}></div> */}
       <ThemeSwitcher theme={theme} setTheme={setTheme} />
       <ToTop onTop={onTop} />
       <Navigation onTop={onTop} isMobile={isMobile} />
