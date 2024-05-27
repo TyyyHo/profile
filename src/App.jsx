@@ -14,7 +14,7 @@ import ThemeSwitcher from "./components/themeSwitcher/themeSwitcher";
 import Loading from "./components/loading/loading";
 
 function App() {
-  const [theme, setTheme] = useState(true);
+  const [theme, setTheme] = useState("lightTheme");
   const [onTop, setOnTop] = useState(true);
   const [finish, setLoading] = useState(false);
   const isMobile = isMobileDevice();
@@ -23,6 +23,7 @@ function App() {
     //6秒後進入主頁面
     window.onload = () => {
       setTimeout(() => {
+        console.log("load");
         setLoading(true);
       }, 4000);
     };
@@ -36,7 +37,7 @@ function App() {
   //若曾造訪，沿用上次使用的佈景主題；若初次造訪則使用lightTheme
   useEffect(() => {
     setTheme(localStorage.getItem("theme") || "lightTheme");
-  });
+  }, []);
 
   //監測toTop是否顯示
   useEffect(() => {
@@ -48,6 +49,7 @@ function App() {
   return (
     <div className={`App ${theme}`}>
       <Loading finish={finish} />
+      {/* <div style={{ width: "500px", height: "500px", backgroundColor: "red" }}></div> */}
       <ThemeSwitcher theme={theme} setTheme={setTheme} />
       <ToTop onTop={onTop} />
       <Navigation onTop={onTop} isMobile={isMobile} />
