@@ -10,11 +10,23 @@
 //RWD (width is higher than 412, lower than 1280)
 @media (max-width: 1250px) {
   #homeContainer {
+    height: 60dvh;
+
     .paragraph {
       justify-content: center;
       h2 {
         font-size: 2em;
         margin: -15px 0;
+      }
+    }
+
+    #infiniteMarquee {
+      margin-top: 20dvh;
+
+      img {
+        margin: 0 48px;
+        width: 36px;
+        height: 36px;
       }
     }
   }
@@ -23,7 +35,7 @@
 //RWD (width is lower than 412)
 @media (max-width: 420px) {
   #homeContainer {
-    height: 90dvh;
+    height: 80dvh;
     position: relative;
     .paragraph {
       justify-content: center;
@@ -31,6 +43,16 @@
       h2 {
         font-size: 1.5em;
         margin: -15px 0;
+      }
+    }
+
+    #infiniteMarquee {
+      margin-top: 20dvh;
+
+      img {
+        margin: 0 32px;
+        width: 32px;
+        height: 32px;
       }
     }
   }
