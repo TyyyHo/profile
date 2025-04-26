@@ -4,7 +4,7 @@ import "./fading_mobile.scss";
 
 const Fading = ({ text }) => {
   return (
-    <div className="fading">
+    <div className="fading" style={{ pointerEvents: "auto" }}>
       <svg>
         <text dominantBaseline="middle" y="55%">
           {text}

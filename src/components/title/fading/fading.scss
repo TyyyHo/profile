@@ -3,9 +3,9 @@
     width: 550px;
     stroke-dasharray: 1200px;
     stroke-dashoffset: 1200px;
-    -moz-animation: draw 12s ease-in infinite;
-    -webkit-animation: draw 12s ease-in infinite;
-    animation: draw 12s ease-in infinite;
+    -moz-animation: draw 8s ease-in infinite;
+    -webkit-animation: draw 8s ease-in infinite;
+    animation: draw 8s ease-in infinite;
     font-size: 5.5em;
 
     text {
@@ -18,7 +18,7 @@
       stroke-dashoffset: 1200px;
     }
 
-    70% {
+    80% {
       stroke-dashoffset: 0;
     }
 

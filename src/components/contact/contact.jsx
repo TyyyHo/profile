@@ -15,7 +15,7 @@ const Contact = () => {
 
   return (
     <section id="contactContainer">
-      <Title title={"Contact info"} />
+      <Title title={"Contact"} />
 
       <section id="info">
         <div className="contactItem call" onClick={() => copy("0962-067202")}>
