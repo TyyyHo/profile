@@ -24,7 +24,7 @@ importers:
         specifier: ^3.2.23
         version: 3.2.23
       sass:
-        specifier: ^1.58.3
+        specifier: ^1.87.0
         version: 1.87.0
       vite-plugin-svgr:
         specifier: ^2.4.0
