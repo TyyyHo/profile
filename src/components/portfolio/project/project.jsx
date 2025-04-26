@@ -42,21 +42,32 @@ const Project = ({ project, photo }) => {
           })}
         </ul>
 
+        {/* 有連結才顯示 */}
         <h4>Url</h4>
-        <ul>
-          <li className="urlItem">
-            網站連結：
-            <a href={project.url} target="_blank" hovertext={project.url}>
-              Link
-            </a>
-          </li>
-          <li className="urlItem">
-            Github：
-            <a href={project.github} target="_blank" hovertext={project.github}>
-              Link
-            </a>
-          </li>
-        </ul>
+        {project.url && project.github ? (
+          <ul>
+            {project.url && (
+              <li className="urlItem">
+                網站連結：
+                <a href={project.url} target="_blank" hovertext={project.url}>
+                  Link
+                </a>
+              </li>
+            )}
+            {project.github && (
+              <li className="urlItem">
+                Github：
+                <a href={project.github} target="_blank" hovertext={project.github}>
+                  Link
+                </a>
+              </li>
+            )}
+          </ul>
+        ) : (
+          <p style={{ fontSize: "0.8em", paddingLeft: "20px", margin: "5px 0", opacity: 0.8 }}>
+            未發布或已停止服務
+          </p>
+        )}
       </section>
     </section>
   );

@@ -1,45 +1,39 @@
 //RWD (width is higher than 1280, lower than 1800)
-@media (max-width: 1800px) {}
+@media (max-width: 1800px) {
+}
 
-//RWD (width is higher than 412, lower than 1280)
+//RWD (width is higher than 500, lower than 1280)
 @media (max-width: 1250px) {
+  #projectContainer {
+    flex-direction: column;
 
-    #projectContainer {
-        flex-direction: column;
+    .carouselContainer {
+      width: 100%;
 
-        .carouselContainer {
-            width: 100%;
-
-            img {
-                margin: 10% 0;
-            }
-        }
-
-
-        .paragraph {
-            width: 80%;
-            padding: 0% 0%;
-
-            h2 {
-                font-size: 1.8em;
-            }
-        }
-
+      img {
+        margin: 10% 0;
+      }
     }
 
+    .paragraph {
+      width: 80%;
+      padding: 0% 0%;
+
+      h2 {
+        font-size: 1.8em;
+      }
+    }
+  }
 }
 
 //RWD (width is lower than 412)
-@media (max-width: 420px) {
-
-    #projectContainer {
-
-        .paragraph {
-
-            h2 {
-                font-size: 1.5em;
-            }
-        }
-
+@media (max-width: 500px) {
+  #projectContainer {
+    margin-bottom: 50px;
+    .paragraph {
+      h2 {
+        font-size: 1.5em;
+      }
     }
+  }
 }

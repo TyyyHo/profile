@@ -1,5 +1,6 @@
 import React from "react";
 import "./portfolio.scss";
+import { profileList } from "../../lib/constant";
 import { projectData } from "./projectData";
 
 import Project from "./project/project";
@@ -20,9 +21,9 @@ const Portfolio = () => {
   return (
     <article id="portfolioContainer" className="section">
       <Title title={"專案"} />
-      <Project project={projectData.personalWeb} photo={[web1, web2, web3]} />
-      <Project project={projectData.udb} photo={[udb1, udb2, udb3]} />
-      <Project project={projectData["ud-simulator"]} photo={[simulator1, simulator2, simulator3]} />
+      {profileList.map((item) => {
+        return <Project key={item.id} project={item} photo={item.image.map((img) => img)} />;
+      })}
     </article>
   );
 };
