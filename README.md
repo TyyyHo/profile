@@ -1,3 +1,3 @@
-# personal_web
+# CV
 
-https://tyyyho.github.io/personal_web/
+[https://tyyyho.github.io/cv](https://tyyyho.github.io/cv)
