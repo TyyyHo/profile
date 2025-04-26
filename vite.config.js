@@ -4,7 +4,6 @@ import svgr from "vite-plugin-svgr";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "./",
-  // base: '/personal_web/',
+  base: "/personal_web/",
   plugins: [svgr(), react()],
 });
