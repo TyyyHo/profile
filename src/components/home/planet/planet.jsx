@@ -2,47 +2,29 @@ import React, { useEffect, useState } from "react";
 import "./planet.scss";
 import "./planet_mobile.scss";
 
+import { TechStackList } from "../../../lib/constant";
+
 //earth
 import earth from "/src/assets/img/planet/earth.webp";
 
 //衛星圖片
-import html from "/src/assets/img/planet/html.webp";
 import css from "/src/assets/img/planet/css.webp";
-import javascript from "/src/assets/img/planet/javascript.webp";
 import git from "/src/assets/img/planet/git.svg";
-import redux from "/src/assets/img/planet/redux.svg";
 import react from "/src/assets/img/planet/react.svg";
-import vite from "/src/assets/img/planet/vite.svg";
-import webpack from "/src/assets/img/planet/webpack.svg";
-import figma from "/src/assets/img/planet/figma.svg";
 
 const Planet = () => {
-  const [imgSrc, setSrc] = useState([]);
+  const [satellite, setSatellite] = useState([]);
+
   function pickImage() {
-    let imageArr = [];
-    let option = [
-      html,
-      css,
-      javascript,
-      git,
-      redux,
-      react,
-      vite,
-      webpack,
-      figma,
-    ];
-
-    //跑三圈取隨機數選image，若選中的image和前次相同則重選，選好push進陣列內等待狀態更新
-    for (let index = 0; index < 3; index++) {
-      let randomNum;
-      while ( randomNum === undefined || option[randomNum] === imgSrc[index]) {
-        randomNum = Math.floor(Math.random() * option.length);
-      }
-      imageArr.push(option.splice(randomNum, 1)[0]);
+    const uniqueOptions = TechStackList.filter(
+      (item) => !satellite.some((src) => src?.name === item.name)
+    );
+    const selectedOptions = [];
+    for (let i = 0; i < 3 && uniqueOptions.length > 0; i++) {
+      const randomIndex = Math.floor(Math.random() * uniqueOptions.length);
+      selectedOptions.push(uniqueOptions.splice(randomIndex, 1)[0]);
     }
-
-    //更新狀態
-    setSrc(imageArr);
+    setSatellite(selectedOptions);
   }
 
   //初始化圖片
@@ -57,13 +39,13 @@ const Planet = () => {
         <img src={earth} alt="earth" />
       </div>
       <div className="orbit path1">
-        <img className="satellite" src={imgSrc[0] || react} alt="orbit" />
+        <img className="satellite" src={satellite[0]?.imageUrl || react} alt="orbit" />
       </div>
       <div className="orbit path2">
-        <img className="satellite" src={imgSrc[1] || git} alt="orbit" />
+        <img className="satellite" src={satellite[1]?.imageUrl || git} alt="orbit" />
       </div>
       <div className="orbit path3">
-        <img className="satellite" src={imgSrc[2] || figma} alt="orbit" />
+        <img className="satellite" src={satellite[2]?.imageUrl || css} alt="orbit" />
       </div>
     </div>
   );

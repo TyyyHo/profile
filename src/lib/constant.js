@@ -1,0 +1,16 @@
+export const TechStackList = Object.freeze([
+  { id: 1, name: "React", imageUrl: "/icon/react.svg" },
+  { id: 2, name: "Next.js", imageUrl: "/icon/next-js.svg" },
+  { id: 3, name: "Typescript", imageUrl: "/icon/typescript.svg" },
+  { id: 4, name: "Javascript", imageUrl: "/icon/javascript.svg" },
+  { id: 5, name: "CSS", imageUrl: "/icon/css.svg" },
+  { id: 6, name: "Tailwind CSS", imageUrl: "/icon/tailwind-css.svg" },
+  { id: 7, name: "Git", imageUrl: "/icon/git.svg" },
+  { id: 8, name: "RainbowKit", imageUrl: "/icon/rainbowkit.svg" },
+  { id: 9, name: "Three.js", imageUrl: "/icon/threejs.svg" },
+  { id: 10, name: "Redux", imageUrl: "/icon/redux.svg" },
+  { id: 11, name: "Zustand", imageUrl: "/icon/zustand.svg" },
+  { id: 12, name: "ffmpeg.wasm", imageUrl: "/icon/ffmpeg-wasm.webp" },
+  { id: 13, name: "A-Frame", imageUrl: "/icon/a-frame.svg" },
+  { id: 14, name: "Framer Motion", imageUrl: "/icon/motion.svg" },
+]);

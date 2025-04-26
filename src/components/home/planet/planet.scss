@@ -1,117 +1,126 @@
 #planet {
-    position: relative;
-    top: -600px;
-    right: -30%;
-    width: 1600px;
-    height: 1600px;
-    // border: 6px solid red;
+  position: relative;
+  top: -600px;
+  right: -30%;
+  width: 1600px;
+  height: 1600px;
+  // border: 6px solid red;
 
-    $earth-left: 60%;
-    $earth-top: 58%;
-    .fakeEarth {
-        cursor: pointer;
-        position: absolute;
-        left: $earth-left;
-        top: $earth-top;
-        width: 20%;
-        height: 20%;
-        z-index: 20;
-        border-radius: 50%;
+  $earth-left: 60%;
+  $earth-top: 58%;
+  .fakeEarth {
+    cursor: pointer;
+    position: absolute;
+    left: $earth-left;
+    top: $earth-top;
+    width: 20%;
+    height: 20%;
+    z-index: 20;
+    border-radius: 50%;
+  }
+
+  .earth {
+    z-index: 10;
+    cursor: pointer;
+    position: absolute;
+    left: $earth-left;
+    top: $earth-top;
+    width: 20%;
+    animation: earthLayer 6s infinite steps(1, start);
+    -webkit-animation: earthLayer 6s infinite steps(1, start);
+    -moz-animation: earthLayer 6s infinite steps(1, start);
+    -o-animation: earthLayer 6s infinite steps(1, start);
+
+    img {
+      width: 100%;
     }
+  }
 
-    .earth {
-        z-index: 10;
-        cursor: pointer;
-        position: absolute;
-        left: $earth-left;
-        top: $earth-top;
-        width: 20%;
-        animation: earthLayer 6s infinite steps(1, start);
-        -webkit-animation: earthLayer 6s infinite steps(1, start);
-        -moz-animation: earthLayer 6s infinite steps(1, start);
-        -o-animation: earthLayer 6s infinite steps(1, start);
+  .orbit {
+    position: absolute;
+    border-radius: 50%;
+    // border: 2px solid rgba(256, 256, 256, 0.1);
+    box-sizing: border-box;
 
-        img {
-            width: 100%;
-        }
+    .satellite {
+      position: absolute;
+      border: 1px solid rgb(0, 0, 0, 0);
+      padding: 5px;
+      //   border-radius: 45%;
     }
+  }
 
+  .path1 {
+    animation: spin 6s infinite linear;
+    width: 70%;
+    height: 70%;
+    top: 34%;
+    left: 35%;
+    z-index: 5;
 
-    .orbit {
-        position: absolute;
-        border-radius: 50%;
-        // border: 2px solid rgba(256, 256, 256, 0.1);
-        box-sizing: border-box;
-
-        .satellite {
-            position: absolute;
-            border: 1px solid rgb(0, 0, 0, 0);
-            padding: 5px;
-            border-radius: 45%;
-        }
-
+    .satellite {
+      width: 5%;
+      animation: satellite-spin 6s infinite linear;
+      left: 12%;
+      top: 11%;
     }
+  }
 
-    .path1 {
-        animation: spin 6s infinite linear;
-        width: 70%;
-        height: 70%;
-        top: 34%;
-        left: 35%;
-        z-index: 5;
+  .path2 {
+    animation: spin 8s infinite linear;
+    width: 3.33%;
+    width: 105%;
+    height: 105%;
+    top: 17%;
+    left: 17.5%;
+    z-index: 4;
 
-        .satellite {
-            width: 5%;
-            animation: satellite-spin 6s infinite linear;
-            left: 12%;
-            top: 11%;
-        }
+    .satellite {
+      width: 3.6%;
+      animation: satellite-spin 8s infinite linear;
+      left: 13.5%;
+      top: 12%;
     }
+  }
 
-    .path2 {
-        animation: spin 8s infinite linear;
-        width: 3.33%;
-        width: 105%;
-        height: 105%;
-        top: 17%;
-        left: 17.5%;
-        z-index: 4;
+  .path3 {
+    animation: spin 10s infinite linear;
+    width: 140%;
+    height: 140%;
+    z-index: 3;
 
-        .satellite {
-            width: 3.6%;
-            animation: satellite-spin 8s infinite linear;
-            left: 13.5%;
-            top: 12%;
-        }
+    .satellite {
+      width: 2.5%;
+      animation: satellite-spin 10s infinite linear;
+      left: 19%;
+      top: 8%;
     }
+  }
 
-    .path3 {
-        animation: spin 10s infinite linear;
-        width: 140%;
-        height: 140%;
-        z-index: 3;
-
-        .satellite {
-            width: 2.5%;
-            animation: satellite-spin 10s infinite linear;
-            left: 19%;
-            top: 8%;
-        }
+  @keyframes spin {
+    from {
+      transform: scaleY(0.2) rotate(0deg);
     }
-
-    @keyframes spin {
-        from { transform: scaleY(0.2) rotate(0deg);}
-        to { transform: scaleY(0.2) rotate(360deg); }
+    to {
+      transform: scaleY(0.2) rotate(360deg);
     }
+  }
 
-    @keyframes satellite-spin {
-        from { transform: rotate(0deg) scaleY(5);}
-        to { transform: rotate(-360deg) scaleY(5); }
+  @keyframes satellite-spin {
+    from {
+      transform: rotate(0deg) scaleY(5);
     }
-
-    @keyframes earthLayer {
-        60% { z-index: 10;}
-        68% { z-index: 0;}
+    to {
+      transform: rotate(-360deg) scaleY(5);
     }
+  }
 
+  @keyframes earthLayer {
+    60% {
+      z-index: 10;
+    }
+    68% {
+      z-index: 0;
+    }
+  }
 }
