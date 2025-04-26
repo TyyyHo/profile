@@ -23,6 +23,7 @@
 //RWD (width is lower than 412)
 @media (max-width: 420px) {
   #homeContainer {
+    height: 90dvh;
     position: relative;
     .paragraph {
       justify-content: center;
