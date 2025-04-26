@@ -43,7 +43,7 @@ importers:
         specifier: ^5.0.0
         version: 5.0.0
       vite:
-        specifier: ^4.1.0
+        specifier: ^4.5.13
         version: 4.5.13(@types/node@22.15.2)(sass@1.87.0)
       vitest:
         specifier: ^0.29.2
