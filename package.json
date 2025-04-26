@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "pnpm run build",
-    "deploy": "pnpm run predeploy && run gh-pages -d dist"
+    "deploy": "pnpm run predeploy && gh-pages -d dist"
   },
   "dependencies": {
     "animejs": "^3.2.1",
