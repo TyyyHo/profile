@@ -1,16 +1,16 @@
 #toTop {
-    position: fixed;
-    right: 60px;
-    bottom: 30px;
-    background-color: rgb(63, 63, 63);
-    border: 2px solid rgb(185, 185, 185);
-    border-radius: 50%;
-    width: 4vh;
-    height: 4vh;
-    box-sizing: border-box;
-    z-index: 100;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: fixed;
+  right: 40px;
+  bottom: 90px;
+  width: 35px;
+  height: 35px;
+  background-color: rgb(63, 63, 63);
+  border: 2px solid rgb(185, 185, 185);
+  border-radius: 50%;
+  box-sizing: border-box;
+  z-index: 100;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

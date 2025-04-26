@@ -1,66 +1,64 @@
 #themeSwitcher {
-    position: fixed;
-    right: 60px;
-    bottom: 100px;
-    border: 1px solid rgb(185, 185, 185);
-    border-radius: 50%;
-    width: 4vh;
-    height: 4vh;
-    box-sizing: border-box;
-    z-index: 100;
-    cursor: pointer;
-    padding: 2px 2px;
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  width: 35px;
+  height: 35px;
+  border: 1px solid rgb(185, 185, 185);
+  border-radius: 50%;
 
+  box-sizing: border-box;
+  z-index: 100;
+  cursor: pointer;
+  padding: 2px 2px;
 
-    .circle {
-            width: 100%;
-            height: 100%;
-        
-        img {
-            width: 100%;
-            height: 100%;
-        }
+  .circle {
+    width: 100%;
+    height: 100%;
 
-        rect {
-            width: 100%;
-            height: 100%;
-        }
+    img {
+      width: 100%;
+      height: 100%;
     }
 
-    .toDark {
-        animation: rotateToDark 1.5s ease-out forwards;
-
-        @keyframes rotateToDark {
-            from {
-                transform: rotate(0deg);
-            }
-
-            to {
-                transform: rotate(-180deg);
-            }
-        }
+    rect {
+      width: 100%;
+      height: 100%;
     }
+  }
 
-    .toLight {
-        animation: rotateToLight 1.5s ease-out forwards;
+  .toDark {
+    animation: rotateToDark 1.5s ease-out forwards;
 
-        @keyframes rotateToLight {
-            
+    @keyframes rotateToDark {
+      from {
+        transform: rotate(0deg);
+      }
 
-            from {
-                transform: rotate(180deg);
-            }
-
-            to {
-                transform: rotate(360deg);
-            }
-        }
+      to {
+        transform: rotate(-180deg);
+      }
     }
+  }
 
-    #tick {
-        top: 8%;
-        left: 7%;
-        position: absolute;
-        width: 50%;
+  .toLight {
+    animation: rotateToLight 1.5s ease-out forwards;
+
+    @keyframes rotateToLight {
+      from {
+        transform: rotate(180deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
     }
+  }
+
+  #tick {
+    top: 8%;
+    left: 7%;
+    position: absolute;
+    width: 50%;
+  }
 }
