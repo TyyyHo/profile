@@ -6,7 +6,6 @@ import { isMobileDevice } from "./components/hint/isMobile/isMobile";
 // components
 import Navigation from "./components/navigation/navigation";
 import Home from "./components/home/home";
-import Effect from "./components/effect/effect";
 import Portfolio from "./components/portfolio/portfolio";
 import Contact from "./components/contact/contact";
 import ToTop from "./components/toTop/toTop";
@@ -52,7 +51,6 @@ function App() {
       <ToTop onTop={onTop} />
       <Navigation onTop={onTop} isMobile={isMobile} />
       <Home />
-      <Effect isMobile={isMobile} />
       <Portfolio />
       <Contact />
     </div>

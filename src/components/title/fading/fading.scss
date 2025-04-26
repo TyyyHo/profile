@@ -1,31 +1,29 @@
 .fading {
+  svg {
+    width: 550px;
+    stroke-dasharray: 1200px;
+    stroke-dashoffset: 1200px;
+    -moz-animation: draw 12s ease-in infinite;
+    -webkit-animation: draw 12s ease-in infinite;
+    animation: draw 12s ease-in infinite;
+    font-size: 5.5em;
 
-    svg {
-        width: 550px;
-        stroke-dasharray: 1200px;
-        stroke-dashoffset: 1200px;
-        -moz-animation: draw 12s ease-in infinite;
-        -webkit-animation: draw 12s ease-in infinite;
-        animation: draw 12s ease-in infinite;
-        font-size: 5.5em;
+    text {
+      stroke-width: 2px;
+    }
+  }
 
-        text {  
-            stroke-width: 2px;
-        }
+  @keyframes draw {
+    5% {
+      stroke-dashoffset: 1200px;
     }
 
-    @keyframes draw {
-        5% {
-            stroke-dashoffset: 1200px;
-        }
-
-        70% {
-            stroke-dashoffset: 0;
-        }
-
-        100% {
-            stroke-dashoffset: 0;
-        }
+    70% {
+      stroke-dashoffset: 0;
     }
 
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
 }

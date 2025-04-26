@@ -1,17 +1,24 @@
 //RWD (width is higher than 1280, lower than 1800)
-@media (max-width: 1800px) {}
+@media (max-width: 1800px) {
+}
 
 //RWD (width is higher than 412, lower than 1280)
-@media (max-width: 1250px) {}
+@media (max-width: 1250px) {
+  .fading {
+    svg {
+      font-size: 4em;
+    }
+  }
+}
 
 //RWD (width is lower than 412)
 @media (max-width: 420px) {
-    .fading {
-        margin: 0;
-        padding: 0;
+  .fading {
+    margin: 0;
+    padding: 0;
 
-        svg {
-            font-size: 4em;
-        }
+    svg {
+      font-size: 3.5em;
     }
+  }
 }
