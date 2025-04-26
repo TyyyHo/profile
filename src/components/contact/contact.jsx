@@ -28,10 +28,10 @@ const Contact = () => {
           <h3>Mail</h3>
           <p id="mail">ty.ho1126@gmail.com</p>
         </div>
-        <div className="contactItem location" onClick={() => copy("Taichung City")}>
+        <div className="contactItem location" onClick={() => copy("Taipei City")}>
           <Location />
           <h3>Location</h3>
-          <p id="location">Taichung City</p>
+          <p id="location">Taipei City</p>
         </div>
       </section>
     </section>
