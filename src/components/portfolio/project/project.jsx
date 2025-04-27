@@ -6,13 +6,18 @@ import "./project_mobile.scss";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 
-const Project = ({ project, photo }) => {
+const Project = ({ project, video, photo }) => {
+  const media = video.concat(photo);
   return (
     <section id="projectContainer">
       <section className="carouselContainer">
         <Carousel showThumbs={false} emulateTouch={true} showStatus={false}>
-          {photo.map((item, index) => {
-            return <img key={index} src={item} loading="lazy" alt="photo" />;
+          {media.map((item, index) => {
+            if (item.type === "image") {
+              return <img key={index} src={item.src} loading="lazy" alt="photo" />;
+            } else {
+              return <video key={index} src={item.src} loading="lazy" alt="" autoPlay muted loop />;
+            }
           })}
         </Carousel>
       </section>
@@ -44,7 +49,7 @@ const Project = ({ project, photo }) => {
 
         {/* 有連結才顯示 */}
         <h4>Url</h4>
-        {project.url && project.github ? (
+        {project.url || project.github ? (
           <ul>
             {project.url && (
               <li className="urlItem">
