@@ -20,19 +20,13 @@ const Navigation = ({ onTop, isMobile }) => {
         <img src={logo} alt="logo" />
       </button>
       <div className="btnContainer">
-        <button className="option" onClick={() => jumpTo("effect", "start")}>
-          Style
+        <button className="option" onClick={() => jumpTo("homeContainer", "start")}>
+          Home
         </button>
-        <button
-          className="option"
-          onClick={() => jumpTo("portfolioContainer", "start")}
-        >
+        <button className="option" onClick={() => jumpTo("portfolioContainer", "start")}>
           Project
         </button>
-        <button
-          className="option"
-          onClick={() => jumpTo("contactContainer", "start")}
-        >
+        <button className="option" onClick={() => jumpTo("contactContainer", "start")}>
           Contact
         </button>
       </div>
