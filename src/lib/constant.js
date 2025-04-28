@@ -66,6 +66,21 @@ export const profileList = Object.freeze([
     github: "https://github.com/TyyyHo/water-time",
   },
   {
+    id: "kingcard",
+    title: "Kingcard",
+    description: "一個金融平台，提供USDT金融卡及匯兌服務。",
+    feature: ["即時交易紀錄", "即時匯兌"],
+    tech: ["next.js", "Typescript", "Tailwind", "React Hook Form", "Zod"],
+    update: [],
+    video: [],
+    image: [
+      { type: "image", src: "image/profile/kingcard/1.webp" },
+      // { type: "image", src: "image/profile/kingcard/2.webp" },
+    ],
+    url: "https://kingcard.vip/",
+    github: null,
+  },
+  {
     id: "matsu-tourism",
     title: "馬祖藝術島-觀光網站",
     description: "馬祖藝術島的觀光網站。",
