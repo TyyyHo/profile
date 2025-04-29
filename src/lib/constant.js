@@ -44,11 +44,10 @@ export const profileList = Object.freeze([
       "Jest",
     ],
     update: [],
-    video: [],
+    video: [{ type: "video", src: "video/profile/jump-cross/1.webm" }],
     image: [
       { type: "image", src: "image/profile/jump-cross/1.webp" },
       { type: "image", src: "image/profile/jump-cross/2.webp" },
-      { type: "image", src: "image/profile/jump-cross/3.webp" },
     ],
     url: null,
     github: null,

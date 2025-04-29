@@ -7,7 +7,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from "react-responsive-carousel";
 
 const Project = ({ project, video, photo }) => {
-  const media = video.concat(photo);
+  const media = photo.concat(video);
   return (
     <section id="projectContainer">
       <section className="carouselContainer">
