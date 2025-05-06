@@ -8,7 +8,7 @@ const direction = "left";
 export default function InfiniteMarquee() {
   return (
     <div id="infiniteMarquee">
-      <Marquee speed={speed} direction={direction}>
+      <Marquee speed={speed} direction={direction} pauseOnHover>
         {TechStackList.map((item) => (
           <div key={item.id}>
             <img src={item.imageUrl} alt={item.name} />
