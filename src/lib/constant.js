@@ -98,7 +98,7 @@ export const profileList = Object.freeze([
       { type: "image", src: "image/profile/matsu-tourism/2.webp" },
       { type: "image", src: "image/profile/matsu-tourism/3.webp" },
     ],
-    url: null,
+    url: "https://matsu-tourism.vercel.app/",
     github: null,
   },
   {

@@ -1,7 +1,6 @@
 import React from "react";
 import "./portfolio.scss";
 import { profileList } from "../../lib/constant";
-import { projectData } from "./projectData";
 
 import Project from "./project/project";
 import Title from "../title/bouncy/title";
