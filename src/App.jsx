@@ -14,7 +14,7 @@ import ToTop from "./components/toTop/toTop";
 import { isMobileDevice } from "./components/hint/isMobile/isMobile";
 import pkg from "../package.json";
 
-function App() {
+export default function App() {
   const [theme, setTheme] = useState("lightTheme");
   const [onTop, setOnTop] = useState(true);
   const [finish, setLoading] = useState(false);
@@ -55,12 +55,16 @@ function App() {
       <Home />
       <Portfolio />
       <Contact />
-      <footer id="footer">
-        <p>Copyright © 2025</p>
-        <p>v{pkg.version}</p>
-      </footer>
+      <Footer />
     </div>
   );
 }
 
-export default App;
+function Footer() {
+  return (
+    <footer id="footer">
+      <p>Copyright © 2025</p>
+      <p>v{pkg.version}</p>
+    </footer>
+  );
+}
