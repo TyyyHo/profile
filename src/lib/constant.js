@@ -74,7 +74,7 @@ export const profileList = Object.freeze([
     video: [],
     image: [
       { type: "image", src: "image/profile/kingcard/1.webp" },
-      // { type: "image", src: "image/profile/kingcard/2.webp" },
+      { type: "image", src: "image/profile/kingcard/2.webp" },
     ],
     url: "https://kingcard.vip/",
     github: null,
