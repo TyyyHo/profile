@@ -1,16 +1,18 @@
-import React, { useEffect, useState } from "react";
 import "./App.scss";
 import "./theme.scss";
-import { isMobileDevice } from "./components/hint/isMobile/isMobile";
 
+import React, { useEffect, useState } from "react";
+
+import Contact from "./components/contact/contact";
+import Home from "./components/home/home";
+import Loading from "./components/loading/loading";
 // components
 import Navigation from "./components/navigation/navigation";
-import Home from "./components/home/home";
 import Portfolio from "./components/portfolio/portfolio";
-import Contact from "./components/contact/contact";
-import ToTop from "./components/toTop/toTop";
 import ThemeSwitcher from "./components/themeSwitcher/themeSwitcher";
-import Loading from "./components/loading/loading";
+import ToTop from "./components/toTop/toTop";
+import { isMobileDevice } from "./components/hint/isMobile/isMobile";
+import pkg from "../package.json";
 
 function App() {
   const [theme, setTheme] = useState("lightTheme");
@@ -53,6 +55,10 @@ function App() {
       <Home />
       <Portfolio />
       <Contact />
+      <footer id="footer">
+        <p>Copyright © 2025</p>
+        <p>v{pkg.version}</p>
+      </footer>
     </div>
   );
 }

@@ -9,9 +9,7 @@ body {
   .section {
     padding: 25px 0;
   }
-
 }
-
 
 html {
   // firefox滾動卷軸隱藏
@@ -24,11 +22,29 @@ html {
   }
 }
 
+#footer {
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  p {
+    margin: 0;
+    font-size: 14px;
+  }
+}
+
 //RWD (width is higher than 1280, lower than 1800)
-@media (max-width: 1800px) {}
+@media (max-width: 1800px) {
+}
 
 //RWD (width is higher than 412, lower than 1280)
-@media (max-width: 1250px) {}
+@media (max-width: 1250px) {
+}
 
 //RWD (width is lower than 412)
-@media (max-width: 420px) {}
+@media (max-width: 420px) {
+}
