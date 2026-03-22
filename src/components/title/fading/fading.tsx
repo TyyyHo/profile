@@ -1,8 +1,8 @@
-import "./fading.scss";
-import "./fading_mobile.scss";
+import "./fading.scss"
+import "./fading_mobile.scss"
 
 interface FadingProps {
-  text: string;
+  text: string
 }
 
 const Fading = ({ text }: FadingProps) => {
@@ -14,7 +14,7 @@ const Fading = ({ text }: FadingProps) => {
         </text>
       </svg>
     </div>
-  );
-};
+  )
+}
 
-export default Fading;
+export default Fading

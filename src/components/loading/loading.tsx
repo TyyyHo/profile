@@ -1,7 +1,7 @@
-import "./loading.scss";
+import "./loading.scss"
 
 interface LoadingProps {
-  finish: boolean;
+  finish: boolean
 }
 
 const Loading = ({ finish }: LoadingProps) => {
@@ -13,7 +13,7 @@ const Loading = ({ finish }: LoadingProps) => {
         <div className="progress"></div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Loading;
+export default Loading

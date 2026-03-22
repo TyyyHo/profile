@@ -1,5 +1,5 @@
 export function isMobileDevice() {
-  let isMobileDevice = false;
+  let isMobileDevice = false
   const mobileDevices: string[] = [
     "Android",
     "webOS",
@@ -8,11 +8,11 @@ export function isMobileDevice() {
     "iPod",
     "BlackBerry",
     "Windows Phone",
-  ];
+  ]
 
-  for (let i = 0; i < mobileDevices.length; i++) {
-    if (navigator.userAgent.match(mobileDevices[i])) isMobileDevice = true;
+  for (const device of mobileDevices) {
+    if (navigator.userAgent.match(device)) isMobileDevice = true
   }
 
-  return isMobileDevice;
+  return isMobileDevice
 }

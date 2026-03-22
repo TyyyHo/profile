@@ -1,12 +1,12 @@
-import "./effect.scss";
-import "./effect_mobile.scss";
+import "./effect.scss"
+import "./effect_mobile.scss"
 
-import BirdsEye from "./birdsEye/birdsEye";
-import Spread from "./spread/spread";
-import Title from "../title/bouncy/title";
+import BirdsEye from "./birdsEye/birdsEye"
+import Spread from "./spread/spread"
+import Title from "../title/bouncy/title"
 
 interface EffectProps {
-  isMobile: boolean;
+  isMobile: boolean
 }
 
 const Effect = ({ isMobile }: EffectProps) => {
@@ -19,7 +19,7 @@ const Effect = ({ isMobile }: EffectProps) => {
         <Spread />
       </section>
     </div>
-  );
-};
+  )
+}
 
-export default Effect;
+export default Effect

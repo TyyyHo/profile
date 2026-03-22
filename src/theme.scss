@@ -8,187 +8,179 @@ $light_background: rgb(240, 240, 240);
 $light_font: rgb(12, 1, 1);
 $light_border: rgb(165, 201, 202);
 
-
 // -----------------------------------------
 
 .darkTheme {
+  background-color: $dark_background;
+  color: $dark_font;
+  transition:
+    background-color 1.5s,
+    color 1.5s;
+
+  .loading {
     background-color: $dark_background;
-    color: $dark_font;
-    transition: background-color 1.5s, color 1.5s;
 
-    .loading {
-        background-color: $dark_background;
-
-        .progress {
-            background-color: $dark_border;
-        }
+    .progress {
+      background-color: $dark_border;
     }
+  }
 
-    #naviContainer {
-        background-color: $dark_background;
-        transition: opacity 1s, background-color 1.5s;
+  #naviContainer {
+    background-color: $dark_background;
+    transition:
+      opacity 1s,
+      background-color 1.5s;
+  }
+
+  .notOnTop {
+    opacity: 0;
+
+    &:hover {
+      opacity: 1;
+      transition: opacity 1.5s;
     }
+  }
 
-    .notOnTop {
-        opacity: 0;
+  .fading {
+    text {
+      fill: $dark_background;
+      stroke: $dark_font;
+    }
+  }
+
+  #planet {
+    .orbit {
+      border: 3px solid rgba(256, 256, 256, 0.1);
+    }
+  }
+
+  #birdsEyeContainer {
+    #img {
+      border: 2px solid wheat;
+    }
+  }
+
+  #projectContainer {
+    .urlItem {
+      a {
+        color: $dark_font;
+        transition: color 1s;
 
         &:hover {
-            opacity: 1;
-            transition: opacity 1.5s;
+          color: $dark_border;
         }
-    }
 
-    .fading {
-
-        text {
-            fill: $dark_background;
-            stroke: $dark_font;
+        &::before {
+          background-color: $light_background;
+          color: $light_font;
         }
+      }
     }
+  }
 
-    #planet {
-
-        .orbit {
-            border: 3px solid rgba(256, 256, 256, 0.1);
-        }
+  #themeSwitcher {
+    #tick {
+      path {
+        stroke: white;
+      }
     }
+  }
 
-    #birdsEyeContainer {
-
-        #img {
-            border: 2px solid wheat;
-        }
+  #contactContainer {
+    #info {
+      svg {
+        fill: yellow;
+      }
     }
-
-    #projectContainer {
-
-        .urlItem {
-            a {
-                color: $dark_font;
-                transition: color 1s;
-
-                &:hover {
-                    color: $dark_border;
-                }
-
-                &::before {
-                    background-color: $light_background;
-                    color: $light_font;
-                }
-            }
-        }
-    }
-
-    #themeSwitcher {
-        #tick {
-
-            path {
-                stroke: white;
-            }
-        }
-    }
-
-    #contactContainer {
-
-        #info {
-
-            svg {
-                fill: yellow;
-            }
-        }
-    }
-
+  }
 }
 
 // -----------------------------------------
 
 .lightTheme {
+  background-color: $light_background;
+  color: $light_font;
+  transition:
+    background-color 1.5s,
+    color 1.5s;
+
+  .loading {
     background-color: $light_background;
-    color: $light_font;
-    transition: background-color 1.5s, color 1.5s;
 
-    .loading {
-        background-color: $light_background;
-
-        .progress {
-            background-color: $light_border;
-        }
+    .progress {
+      background-color: $light_border;
     }
+  }
 
+  #naviContainer {
+    background-color: $light_background;
+    transition:
+      opacity 1s,
+      background-color 1.5s;
+  }
 
-    #naviContainer {
-        background-color: $light_background;
-        transition: opacity 1s, background-color 1.5s;
+  .notOnTop {
+    opacity: 0;
+
+    &:hover {
+      opacity: 1;
+      transition: opacity 1.5s;
     }
+  }
 
-    .notOnTop {
-        opacity: 0;
+  .fading {
+    text {
+      fill: $light_background;
+      stroke: $light_font;
+      transition:
+        fill 2s,
+        stroke 2s;
+    }
+  }
+
+  #planet {
+    .orbit {
+      border: 3px solid rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  #birdsEyeContainer {
+    #img {
+      border: 3px solid rgb(230, 141, 26);
+    }
+  }
+
+  #projectContainer {
+    .urlItem {
+      a {
+        color: $light_font;
+        transition: color 1.5s;
 
         &:hover {
-            opacity: 1;
-            transition: opacity 1.5s;
+          color: $light_border;
         }
-    }
 
-    .fading {
-
-        text {
-            fill: $light_background;
-            stroke: $light_font;
-            transition: fill 2s, stroke 2s;
+        &::before {
+          background-color: $dark_background;
+          color: $dark_font;
         }
+      }
     }
+  }
 
-    #planet {
-
-        .orbit {
-            border: 3px solid rgba(0, 0, 0, 0.1);
-        }
+  #themeSwitcher {
+    #tick {
+      path {
+        stroke: black;
+      }
     }
+  }
 
-    #birdsEyeContainer {
-
-        #img {
-            border: 3px solid rgb(230, 141, 26);
-        }
+  #contactContainer {
+    #info {
+      svg {
+        fill: rgb(52, 201, 209);
+      }
     }
-
-    #projectContainer {
-
-        .urlItem {
-            a {
-                color: $light_font;
-                transition: color 1.5s;
-
-                &:hover {
-                    color: $light_border;
-                }
-
-                &::before {
-                    background-color: $dark_background;
-                    color: $dark_font;
-                }
-            }
-        }
-    }
-
-    #themeSwitcher {
-        #tick {
-
-            path {
-                stroke: black;
-            }
-        }
-    }
-
-    #contactContainer {
-
-        #info {
-
-            svg {
-                fill: rgb(52, 201, 209);
-            }
-        }
-    }
-
+  }
 }

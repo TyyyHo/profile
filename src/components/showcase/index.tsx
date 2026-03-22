@@ -1,15 +1,10 @@
-import Title from "../title/bouncy/title";
-
-interface ShowcaseProps {
-  isMobile: boolean;
-}
-
-export default function Showcase({ isMobile }: ShowcaseProps) {
+import Title from "../title/bouncy/title"
+export default function Showcase() {
   return (
-    <div id="showcase" className="section" data-mobile={isMobile}>
+    <div id="showcase" className="section">
       <Title title={"Showcase"} />
 
       <section id="showcaseContainer"></section>
     </div>
-  );
+  )
 }

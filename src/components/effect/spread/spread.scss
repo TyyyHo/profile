@@ -1,27 +1,27 @@
 #spread {
-    position: relative;
-    margin: 0 auto;
-    width: 45%;
-    height: 600px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
-    grid-template-rows: repeat(auto-fit, minmax(30px, 1fr));
+  position: relative;
+  margin: 0 auto;
+  width: 45%;
+  height: 600px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(30px, 1fr));
 
-    .gridItem {
-        border-radius: 3px;
-        min-width: 100%;
-        min-height: 100%;
-        outline: 1px solid black;
-        background-color: white;
+  .gridItem {
+    border-radius: 3px;
+    min-width: 100%;
+    min-height: 100%;
+    outline: 1px solid black;
+    background-color: white;
 
-        &:hover {
-            cursor: pointer;
-            opacity: 0.9;
-        }
+    &:hover {
+      cursor: pointer;
+      opacity: 0.9;
     }
+  }
 
-    #clickHint {
-        top: 10%;
-        left: 45%;
-    }
+  #clickHint {
+    top: 10%;
+    left: 45%;
+  }
 }

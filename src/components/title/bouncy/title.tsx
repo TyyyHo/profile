@@ -1,21 +1,19 @@
-import { useState } from "react";
-import "./title.scss";
-import "./title_mobile.scss";
+import { useState } from "react"
+import "./title.scss"
+import "./title_mobile.scss"
 
 interface TitleProps {
-  title: string;
+  title: string
 }
 
-type AnimationState =
-  | {
-      animationName: "bouncy";
-      key: number;
-    }
-  | null;
+type AnimationState = {
+  animationName: "bouncy"
+  key: number
+} | null
 
 const Title = ({ title }: TitleProps) => {
-  const [animation, setAnimation] = useState<AnimationState>(null);
-  const myTitle = title.split("");
+  const [animation, setAnimation] = useState<AnimationState>(null)
+  const myTitle = title.split("")
 
   return (
     <div id="titleContainer">
@@ -24,18 +22,24 @@ const Title = ({ title }: TitleProps) => {
           return (
             <span
               key={index}
-              className={animation?.key === index ? animation.animationName : ""}
-              onMouseEnter={() => setAnimation({ animationName: "bouncy", key: index })}
-              onClick={() => setAnimation({ animationName: "bouncy", key: index })}
+              className={
+                animation?.key === index ? animation.animationName : ""
+              }
+              onMouseEnter={() =>
+                setAnimation({ animationName: "bouncy", key: index })
+              }
+              onClick={() =>
+                setAnimation({ animationName: "bouncy", key: index })
+              }
               onAnimationEnd={() => setAnimation(null)}
             >
               {item !== " " ? item : <span>&nbsp;</span>}
             </span>
-          );
+          )
         })}
       </h2>
     </div>
-  );
-};
+  )
+}
 
-export default Title;
+export default Title

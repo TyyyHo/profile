@@ -1,23 +1,23 @@
-import "./themeSwitcher.scss";
-import "./themeSwitcher_mobile.scss";
+import "./themeSwitcher.scss"
+import "./themeSwitcher_mobile.scss"
 
-import { ReactComponent as Circle } from "/src/assets/img/themeSwitcher/switcher.svg";
-import { ReactComponent as Tick } from "/src/assets/img/themeSwitcher/tick.svg";
+import { ReactComponent as Circle } from "/src/assets/img/themeSwitcher/switcher.svg"
+import { ReactComponent as Tick } from "/src/assets/img/themeSwitcher/tick.svg"
 
 interface ThemeSwitcherProps {
-  theme: "lightTheme" | "darkTheme";
-  setTheme: React.Dispatch<React.SetStateAction<"lightTheme" | "darkTheme">>;
+  theme: "lightTheme" | "darkTheme"
+  setTheme: React.Dispatch<React.SetStateAction<"lightTheme" | "darkTheme">>
 }
 
 const ThemeSwitcher = ({ theme, setTheme }: ThemeSwitcherProps) => {
   function triggerSwitch() {
-    const nextTheme = theme === "lightTheme" ? "darkTheme" : "lightTheme";
-    setTheme(nextTheme);
-    localStorage.setItem("theme", nextTheme);
+    const nextTheme = theme === "lightTheme" ? "darkTheme" : "lightTheme"
+    setTheme(nextTheme)
+    localStorage.setItem("theme", nextTheme)
   }
 
   function triggerAnimation() {
-    return theme === "lightTheme" ? "toLight" : "toDark";
+    return theme === "lightTheme" ? "toLight" : "toDark"
   }
 
   return (
@@ -27,7 +27,7 @@ const ThemeSwitcher = ({ theme, setTheme }: ThemeSwitcherProps) => {
       </div>
       <Tick />
     </div>
-  );
-};
+  )
+}
 
-export default ThemeSwitcher;
+export default ThemeSwitcher

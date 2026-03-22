@@ -1,10 +1,10 @@
-import "./clickHint.scss";
+import "./clickHint.scss"
 
-import { ReactComponent as ClickImg } from "../../../assets/img/hint/tap.svg";
+import { ReactComponent as ClickImg } from "../../../assets/img/hint/tap.svg"
 
 interface ClickHintProps {
-  isShow: boolean;
-  text: string;
+  isShow: boolean
+  text: string
 }
 
 const ClickHint = ({ isShow, text }: ClickHintProps) => {
@@ -15,7 +15,7 @@ const ClickHint = ({ isShow, text }: ClickHintProps) => {
       </div>
       <p>{text}</p>
     </div>
-  );
-};
+  )
+}
 
-export default ClickHint;
+export default ClickHint

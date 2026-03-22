@@ -10,7 +10,12 @@
     "type:check": "tsc --noEmit",
     "preview": "vite preview",
     "predeploy": "pnpm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "lint:check": "eslint . --max-warnings 0",
+    "prepare": "husky"
   },
   "dependencies": {
     "animejs": "^3.2.1",
@@ -26,7 +31,10 @@
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react": "^3.1.0",
+    "eslint": "^10.1.0",
     "gh-pages": "^5.0.0",
+    "husky": "^9.1.7",
+    "prettier": "^3.8.1",
     "typescript": "^5.9.3",
     "vite": "^4.5.13",
     "vitest": "^0.29.2"

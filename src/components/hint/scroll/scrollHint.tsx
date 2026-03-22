@@ -1,10 +1,10 @@
-import "./scrollHint.scss";
+import "./scrollHint.scss"
 
-import { ReactComponent as ScrollImg } from "../../../assets/img/hint/tap.svg";
+import { ReactComponent as ScrollImg } from "../../../assets/img/hint/tap.svg"
 
 interface ScrollHintProps {
-  isShow: boolean;
-  text: string;
+  isShow: boolean
+  text: string
 }
 
 const ScrollHint = ({ isShow, text }: ScrollHintProps) => {
@@ -15,7 +15,7 @@ const ScrollHint = ({ isShow, text }: ScrollHintProps) => {
       </div>
       <p>{text}</p>
     </div>
-  );
-};
+  )
+}
 
-export default ScrollHint;
+export default ScrollHint

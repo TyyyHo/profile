@@ -1,27 +1,27 @@
-import "./navigation.scss";
-import "./navigation_mobile.scss";
+import "./navigation.scss"
+import "./navigation_mobile.scss"
 
 //photo
-import logo from "/src/assets/img/logo/owl.webp";
+import logo from "/src/assets/img/logo/owl.webp"
 
 interface NavigationProps {
-  onTop: boolean;
-  isMobile: boolean;
+  onTop: boolean
+  isMobile: boolean
 }
 
 const Navigation = ({ onTop, isMobile }: NavigationProps) => {
   function jumpTo(id: string, block: ScrollLogicalPosition = "start") {
-    const element = document.getElementById(id);
+    const element = document.getElementById(id)
     if (!element) {
-      return;
+      return
     }
 
-    element.scrollIntoView({ behavior: "smooth", block });
+    element.scrollIntoView({ behavior: "smooth", block })
   }
 
   function isNaviShow() {
-    if (isMobile) return true;
-    return onTop;
+    if (isMobile) return true
+    return onTop
   }
 
   return (
@@ -30,18 +30,27 @@ const Navigation = ({ onTop, isMobile }: NavigationProps) => {
         <img src={logo} alt="logo" />
       </button>
       <div className="btnContainer">
-        <button className="option" onClick={() => jumpTo("homeContainer", "start")}>
+        <button
+          className="option"
+          onClick={() => jumpTo("homeContainer", "start")}
+        >
           Home
         </button>
-        <button className="option" onClick={() => jumpTo("portfolioContainer", "start")}>
+        <button
+          className="option"
+          onClick={() => jumpTo("portfolioContainer", "start")}
+        >
           Project
         </button>
-        <button className="option" onClick={() => jumpTo("contactContainer", "start")}>
+        <button
+          className="option"
+          onClick={() => jumpTo("contactContainer", "start")}
+        >
           Contact
         </button>
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default Navigation;
+export default Navigation
