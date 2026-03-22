@@ -1,3 +1,3 @@
 # Check out my profile!
 
-Link: [https://tyyyho.github.io/profile](https://tyyyho.github.io/profile)
+Link: [https://tylercore.github.io/profile](https://tylercore.github.io/profile)
