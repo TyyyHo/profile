@@ -1,4 +1,3 @@
-import React from "react";
 import "./contact.scss";
 import "./contact_mobile.scss";
 
@@ -9,7 +8,7 @@ import { ReactComponent as Location } from "/src/assets/img/contact/location.svg
 import Title from "../title/bouncy/title";
 
 const Contact = () => {
-  function copy(text) {
+  function copy(text: string) {
     navigator.clipboard.writeText(text);
   }
 

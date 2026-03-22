@@ -1,6 +1,6 @@
 export function isMobileDevice() {
   let isMobileDevice = false;
-  let mobileDevices = [
+  const mobileDevices: string[] = [
     "Android",
     "webOS",
     "iPhone",

@@ -1,4 +1,3 @@
-import React from "react";
 import "./home.scss";
 import "./home_mobile.scss";
 

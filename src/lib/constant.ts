@@ -1,4 +1,28 @@
-export const TechStackList = Object.freeze([
+export interface TechStackItem {
+  id: number;
+  name: string;
+  imageUrl: string;
+}
+
+export interface ProfileMediaItem {
+  type: "image" | "video";
+  src: string;
+}
+
+export interface ProfileItem {
+  id: string;
+  title: string;
+  description: string;
+  feature: string[];
+  tech: string[];
+  update: string[];
+  video: ProfileMediaItem[];
+  image: ProfileMediaItem[];
+  url: string | null;
+  github: string | null;
+}
+
+export const TechStackList: ReadonlyArray<TechStackItem> = Object.freeze([
   { id: 1, name: "React", imageUrl: "icon/react.svg" },
   { id: 2, name: "Next.js", imageUrl: "icon/next-js.svg" },
   { id: 3, name: "Typescript", imageUrl: "icon/typescript.svg" },
@@ -15,7 +39,7 @@ export const TechStackList = Object.freeze([
   { id: 14, name: "Framer Motion", imageUrl: "icon/motion.svg" },
 ]);
 
-export const profileList = Object.freeze([
+export const profileList: ReadonlyArray<ProfileItem> = Object.freeze([
   {
     id: "Jump_Cross",
     title: "Jump Cross",

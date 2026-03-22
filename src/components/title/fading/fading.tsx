@@ -1,8 +1,11 @@
-import React from "react";
 import "./fading.scss";
 import "./fading_mobile.scss";
 
-const Fading = ({ text }) => {
+interface FadingProps {
+  text: string;
+}
+
+const Fading = ({ text }: FadingProps) => {
   return (
     <div className="fading" style={{ pointerEvents: "auto" }}>
       <svg>

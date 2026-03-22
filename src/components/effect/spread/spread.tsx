@@ -1,37 +1,44 @@
-import React, { useEffect, useRef, useState } from "react";
-import anime from "animejs/lib/anime.es.js";
+import { useEffect, useRef, useState } from "react";
+import anime from "animejs";
 import "./spread.scss";
 import "./spread_mobile.scss";
 
 import ClickHint from "../../hint/click/clickHint";
 
+interface GridState {
+  columns: number;
+  rows: number;
+  total: number;
+}
+
 const Spread = () => {
   const [showHint, setHint] = useState(true);
-  const [grid, setGrid] = useState({ columns: 0, rows: 0, total: 1 });
-  const previousColor = useRef(0);
+  const [grid, setGrid] = useState<GridState>({ columns: 0, rows: 0, total: 1 });
+  const previousColor = useRef<number>(0);
   const { total } = grid;
 
   function initGrid() {
-    const columns = Math.floor(
-      document.getElementById("spread").clientWidth / 30
-    );
-    const rows = Math.floor(
-      document.getElementById("spread").clientHeight / 30
-    );
+    const spreadEl = document.getElementById("spread");
+    if (!spreadEl) {
+      return;
+    }
+
+    const columns = Math.floor(spreadEl.clientWidth / 30);
+    const rows = Math.floor(spreadEl.clientHeight / 30);
 
     setGrid({
-      columns: columns,
-      rows: rows,
+      columns,
+      rows,
       total: columns * rows,
     });
   }
 
   //觸發動畫
-  function tiggerSpread(e) {
-    const id = e.target.id;
+  function tiggerSpread(e: React.MouseEvent<HTMLDivElement>) {
+    const id = Number((e.target as HTMLElement).id || 0);
     const { columns, rows } = grid;
     //顏色選項
-    const option = [
+    const option: Array<[number, number]> = [
       [10, 64],
       [30, 60],
       [55, 65],
@@ -42,20 +49,16 @@ const Spread = () => {
     ];
 
     //取隨機不重複數字，不重複時紀錄在Ref
-    let randomNum;
+    let randomNum: number | undefined;
     while (randomNum === undefined || randomNum === previousColor.current) {
       randomNum = Math.floor(Math.random() * option.length);
     }
     previousColor.current = randomNum;
 
     //更新顏色
-    let color1 = `hsl(${option[randomNum][0]}, 90%, ${
-      option[randomNum][1] - 18
-    }%)`;
-    let color2 = `hsl(${option[randomNum][0]}, 90%, ${
-      option[randomNum][1] - 15
-    }%)`;
-    let color3 = `hsl(${option[randomNum][0]}, 100%, ${option[randomNum][1]}%)`;
+    const color1 = `hsl(${option[randomNum][0]}, 90%, ${option[randomNum][1] - 18}%)`;
+    const color2 = `hsl(${option[randomNum][0]}, 90%, ${option[randomNum][1] - 15}%)`;
+    const color3 = `hsl(${option[randomNum][0]}, 100%, ${option[randomNum][1]}%)`;
 
     //動畫
     anime({
@@ -80,8 +83,8 @@ const Spread = () => {
   return (
     <div id="spread" onClick={tiggerSpread}>
       <ClickHint isShow={showHint} text={"Click"} />
-      {[...Array(total)].map((item, index) => {
-        return <div id={index} className="gridItem" key={index}></div>;
+      {[...Array(total)].map((_, index) => {
+        return <div id={String(index)} className="gridItem" key={index}></div>;
       })}
     </div>
   );

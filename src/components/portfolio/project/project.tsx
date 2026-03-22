@@ -1,13 +1,20 @@
-import React from "react";
 import "./project.scss";
 import "./project_mobile.scss";
 
 // 輪播
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
+import type { ProfileItem, ProfileMediaItem } from "../../../lib/constant";
 
-const Project = ({ project, video, photo }) => {
-  const media = photo.concat(video);
+interface ProjectProps {
+  project: ProfileItem;
+  video: ProfileMediaItem[];
+  photo: ProfileMediaItem[];
+}
+
+const Project = ({ project, video, photo }: ProjectProps) => {
+  const media: ProfileMediaItem[] = photo.concat(video);
+
   return (
     <section id="projectContainer">
       <section className="carouselContainer">
@@ -15,9 +22,9 @@ const Project = ({ project, video, photo }) => {
           {media.map((item, index) => {
             if (item.type === "image") {
               return <img key={index} src={item.src} loading="lazy" alt="photo" />;
-            } else {
-              return <video key={index} src={item.src} loading="lazy" alt="" autoPlay muted loop />;
             }
+
+            return <video key={index} src={item.src} autoPlay muted loop playsInline preload="metadata" />;
           })}
         </Carousel>
       </section>
@@ -54,7 +61,7 @@ const Project = ({ project, video, photo }) => {
             {project.url && (
               <li className="urlItem">
                 網站連結：
-                <a href={project.url} target="_blank" hovertext={project.url}>
+                <a href={project.url} target="_blank" rel="noreferrer" data-hovertext={project.url}>
                   Link
                 </a>
               </li>
@@ -62,7 +69,7 @@ const Project = ({ project, video, photo }) => {
             {project.github && (
               <li className="urlItem">
                 Github：
-                <a href={project.github} target="_blank" hovertext={project.github}>
+                <a href={project.github} target="_blank" rel="noreferrer" data-hovertext={project.github}>
                   Link
                 </a>
               </li>

@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./planet.scss";
 import "./planet_mobile.scss";
 
 import { TechStackList } from "../../../lib/constant";
+import type { TechStackItem } from "../../../lib/constant";
 
 //earth
 import earth from "/src/assets/img/planet/earth.webp";
@@ -13,17 +14,19 @@ import git from "/src/assets/img/planet/git.svg";
 import react from "/src/assets/img/planet/react.svg";
 
 const Planet = () => {
-  const [satellite, setSatellite] = useState([]);
+  const [satellite, setSatellite] = useState<TechStackItem[]>([]);
 
   function pickImage() {
     const uniqueOptions = TechStackList.filter(
-      (item) => !satellite.some((src) => src?.name === item.name)
+      (item) => !satellite.some((src) => src.name === item.name)
     );
-    const selectedOptions = [];
+    const selectedOptions: TechStackItem[] = [];
+
     for (let i = 0; i < 3 && uniqueOptions.length > 0; i++) {
       const randomIndex = Math.floor(Math.random() * uniqueOptions.length);
       selectedOptions.push(uniqueOptions.splice(randomIndex, 1)[0]);
     }
+
     setSatellite(selectedOptions);
   }
 

@@ -1,12 +1,15 @@
-import React from "react";
 import "./clickHint.scss";
 
 import { ReactComponent as ClickImg } from "../../../assets/img/hint/tap.svg";
 
-const ClickHint = ({ isShow, text }) => {
+interface ClickHintProps {
+  isShow: boolean;
+  text: string;
+}
 
+const ClickHint = ({ isShow, text }: ClickHintProps) => {
   return (
-    <div id="clickHint" className={!isShow ? "hideClick":""} >
+    <div id="clickHint" className={!isShow ? "hideClick" : ""}>
       <div className="svgContainer">
         <ClickImg />
       </div>

@@ -1,9 +1,13 @@
-import React from "react";
 import "./scrollHint.scss";
 
 import { ReactComponent as ScrollImg } from "../../../assets/img/hint/tap.svg";
 
-const ScrollHint = ({ isShow, text }) => {
+interface ScrollHintProps {
+  isShow: boolean;
+  text: string;
+}
+
+const ScrollHint = ({ isShow, text }: ScrollHintProps) => {
   return (
     <div id="scrollHint" className={isShow ? "" : "hideScroll"}>
       <div className="svgContainer">

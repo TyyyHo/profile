@@ -1,10 +1,13 @@
-import React from "react";
 import "./toTop.scss";
 import "./toTop_mobile.scss";
 
-import arrow from "/src/assets/img/toTop/up_ward.png"
+import arrow from "/src/assets/img/toTop/up_ward.png";
 
-const ToTop = ({ onTop }) => {
+interface ToTopProps {
+  onTop: boolean;
+}
+
+const ToTop = ({ onTop }: ToTopProps) => {
   const goToTop = () => {
     window.scrollTo({
       top: 0,
@@ -14,11 +17,9 @@ const ToTop = ({ onTop }) => {
 
   return !onTop ? (
     <div id="toTop" onClick={goToTop}>
-      <img src={arrow} />
+      <img src={arrow} alt="Back to top" />
     </div>
-  ) : (
-    <></>
-  );
+  ) : null;
 };
 
 export default ToTop;
