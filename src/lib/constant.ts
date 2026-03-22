@@ -1,4 +1,28 @@
-export const TechStackList = Object.freeze([
+export interface TechStackItem {
+  id: number
+  name: string
+  imageUrl: string
+}
+
+export interface ProfileMediaItem {
+  type: "image" | "video"
+  src: string
+}
+
+export interface ProfileItem {
+  id: string
+  title: string
+  description: string
+  feature: string[]
+  tech: string[]
+  update: string[]
+  video: ProfileMediaItem[]
+  image: ProfileMediaItem[]
+  url: string | null
+  github: string | null
+}
+
+export const TechStackList: ReadonlyArray<TechStackItem> = Object.freeze([
   { id: 1, name: "React", imageUrl: "icon/react.svg" },
   { id: 2, name: "Next.js", imageUrl: "icon/next-js.svg" },
   { id: 3, name: "Typescript", imageUrl: "icon/typescript.svg" },
@@ -13,9 +37,9 @@ export const TechStackList = Object.freeze([
   { id: 12, name: "ffmpeg.wasm", imageUrl: "icon/ffmpeg-wasm.webp" },
   { id: 13, name: "A-Frame", imageUrl: "icon/a-frame.svg" },
   { id: 14, name: "Framer Motion", imageUrl: "icon/motion.svg" },
-]);
+])
 
-export const profileList = Object.freeze([
+export const profileList: ReadonlyArray<ProfileItem> = Object.freeze([
   {
     id: "Jump_Cross",
     title: "Jump Cross",
@@ -90,7 +114,14 @@ export const profileList = Object.freeze([
       "串接外部團隊已建立的API，取得景點資訊",
       "RWD",
     ],
-    tech: ["Next.js", "Zustand", "Three.js", "Tween.js", "Tailwind", "Typescript"],
+    tech: [
+      "Next.js",
+      "Zustand",
+      "Three.js",
+      "Tween.js",
+      "Tailwind",
+      "Typescript",
+    ],
     update: [],
     video: [],
     image: [
@@ -127,7 +158,11 @@ export const profileList = Object.freeze([
     id: "ud-simulator",
     title: "Undecember屬性模擬器",
     description: "惡月十三的屬性加點模擬器。",
-    feature: ["模擬遊戲內的設置，使用者可反覆調整自身屬性", "一鍵匯入/匯出，便於分享", "RWD"],
+    feature: [
+      "模擬遊戲內的設置，使用者可反覆調整自身屬性",
+      "一鍵匯入/匯出，便於分享",
+      "RWD",
+    ],
     tech: [
       "使用預處理器SASS編輯樣式",
       "設計一鍵匯入/匯出功能，將核心狀態編寫為字串型態，再透過URI編碼將字串轉為瀏覽器網址列可接收的字元，方便使用者從網址列直接匯入",
@@ -146,4 +181,4 @@ export const profileList = Object.freeze([
     url: "https://ud-simulator.web.app/",
     github: "https://github.com/TyyyHo/U-Simulator",
   },
-]);
+])

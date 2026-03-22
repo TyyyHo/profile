@@ -1,10 +1,9 @@
-import React from "react";
-import "./home.scss";
-import "./home_mobile.scss";
+import "./home.scss"
+import "./home_mobile.scss"
 
-import Planet from "./planet/planet";
-import Fading from "../title/fading/fading";
-import InfiniteMarquee from "../infinite-marquee";
+import Planet from "./planet/planet"
+import Fading from "../title/fading/fading"
+import InfiniteMarquee from "../infinite-marquee"
 
 const Home = () => {
   return (
@@ -18,7 +17,7 @@ const Home = () => {
 
       <InfiniteMarquee />
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
