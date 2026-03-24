@@ -1,6 +1,6 @@
 import { useState } from "react"
-import "./birdsEye.scss"
-import "./birdsEye_mobile.scss"
+import "./birdsEye.css"
+import "./birdsEye_mobile.css"
 
 import ScrollHint from "../../hint/scroll/scrollHint"
 import ClickHint from "../../hint/click/clickHint"

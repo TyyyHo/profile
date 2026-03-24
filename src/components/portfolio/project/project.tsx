@@ -1,5 +1,5 @@
-import "./project.scss"
-import "./project_mobile.scss"
+import "./project.css"
+import "./project_mobile.css"
 
 // 輪播
 import "react-responsive-carousel/lib/styles/carousel.min.css"

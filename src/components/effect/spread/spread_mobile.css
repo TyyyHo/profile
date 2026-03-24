@@ -1,0 +1,10 @@
+@media (max-width: 1250px) {
+  #spread {
+    width: 86%;
+    height: 300px;
+    margin: 0 auto 10% auto;
+  }
+  #spread #clickHint {
+    left: 42%;
+  }
+}

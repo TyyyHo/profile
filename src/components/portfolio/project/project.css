@@ -1,0 +1,78 @@
+#projectContainer {
+  display: flex;
+  align-items: center;
+  width: 96%;
+  margin-bottom: 75px;
+  margin-left: 2%;
+}
+#projectContainer .carouselContainer {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#projectContainer .carouselContainer img {
+  margin: 5% 0;
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(70, 69, 69, 0.8);
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+#projectContainer .carouselContainer video {
+  object-fit: fill;
+  margin: 5% 0;
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(70, 69, 69, 0.8);
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+#projectContainer .paragraph {
+  width: 50%;
+  height: 100%;
+  padding: 0% 3%;
+  box-sizing: border-box;
+}
+#projectContainer .paragraph h2 {
+  font-size: 2em;
+}
+#projectContainer .paragraph p {
+  margin: 30px 0;
+}
+#projectContainer .paragraph h4 {
+  font-style: italic;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+#projectContainer .paragraph ul {
+  margin-block-start: 0;
+}
+#projectContainer .paragraph li {
+  line-height: 1.3em;
+}
+#projectContainer .paragraph .urlItem {
+  list-style-type: none;
+  position: relative;
+}
+#projectContainer .paragraph .urlItem a {
+  text-decoration: none;
+}
+#projectContainer .paragraph .urlItem a::before {
+  content: attr(data-hovertext);
+  visibility: hidden;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 10px;
+  position: absolute;
+  z-index: 2;
+  left: -5%;
+  top: 110%;
+}
+#projectContainer .paragraph .urlItem a:hover::before {
+  opacity: 0.8;
+  visibility: visible;
+}

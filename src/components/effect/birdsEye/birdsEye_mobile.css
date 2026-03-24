@@ -1,0 +1,7 @@
+@media (max-width: 1250px) {
+  #birdsEyeContainer {
+    width: 86%;
+    height: 300px;
+    margin: 0 auto 10% auto;
+  }
+}

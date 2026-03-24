@@ -1,0 +1,30 @@
+#birdsEyeContainer {
+  position: relative;
+  margin: 0 auto;
+  width: 45%;
+  height: 600px;
+  border-radius: 14px;
+}
+#birdsEyeContainer .wrapper {
+  overflow: hidden;
+  height: 100%;
+  border-radius: 14px;
+}
+#birdsEyeContainer .wrapper #img {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../assets/img/birdsEye/view.webp);
+  background-size: cover;
+  transform: translateX(var(--x)) translateY(var(--y)) scale(var(--scale));
+  transition: ease-out 0.7s;
+  border-radius: 15px;
+}
+#birdsEyeContainer #scrollHint {
+  top: 10%;
+  left: 45%;
+}
+#birdsEyeContainer #clickHint {
+  top: 10%;
+  left: 42%;
+}

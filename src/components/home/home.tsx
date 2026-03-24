@@ -1,5 +1,5 @@
-import "./home.scss"
-import "./home_mobile.scss"
+import "./home.css"
+import "./home_mobile.css"
 
 import Planet from "./planet/planet"
 import Fading from "../title/fading/fading"

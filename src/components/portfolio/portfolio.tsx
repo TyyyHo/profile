@@ -1,4 +1,4 @@
-import "./portfolio.scss"
+import "./portfolio.css"
 import { profileList } from "../../lib/constant"
 
 import Project from "./project/project"

@@ -1,0 +1,27 @@
+@media (max-width: 1250px) {
+  #projectContainer {
+    flex-direction: column;
+  }
+  #projectContainer .carouselContainer {
+    width: 100%;
+  }
+  #projectContainer .carouselContainer img,
+  #projectContainer .carouselContainer video {
+    margin: 10% 0;
+  }
+  #projectContainer .paragraph {
+    width: 80%;
+    padding: 0% 0%;
+  }
+  #projectContainer .paragraph h2 {
+    font-size: 1.8em;
+  }
+}
+@media (max-width: 500px) {
+  #projectContainer {
+    margin-bottom: 50px;
+  }
+  #projectContainer .paragraph h2 {
+    font-size: 1.5em;
+  }
+}

@@ -1,5 +1,5 @@
-import "./fading.scss"
-import "./fading_mobile.scss"
+import "./fading.css"
+import "./fading_mobile.css"
 
 interface FadingProps {
   text: string

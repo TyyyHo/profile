@@ -1,0 +1,48 @@
+#naviContainer {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-shadow: rgba(138, 138, 138, 0.35) 3px 3px 10px;
+  position: fixed;
+  z-index: 100;
+}
+#naviContainer button {
+  all: unset;
+  cursor: pointer;
+}
+#naviContainer .logo {
+  height: 70%;
+  margin-left: 2%;
+  background-color: white;
+  border-radius: 100%;
+}
+#naviContainer .logo img {
+  height: 100%;
+}
+#naviContainer .btnContainer {
+  position: relative;
+  left: 10%;
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+}
+#naviContainer .btnContainer .option {
+  font-style: italic;
+  font-weight: 600;
+  opacity: 0.8;
+}
+#naviContainer .btnContainer .option:hover {
+  opacity: 1;
+}
+
+.abc {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+  transition: background-color 1.5s;
+}
+.abc:hover {
+  opacity: 1;
+  transition: opacity 1.5s ease-in;
+}

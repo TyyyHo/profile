@@ -1,5 +1,5 @@
-import "./contact.scss"
-import "./contact_mobile.scss"
+import "./contact.css"
+import "./contact_mobile.css"
 
 import { ReactComponent as Call } from "/src/assets/img/contact/call.svg"
 import { ReactComponent as Mail } from "/src/assets/img/contact/mail.svg"

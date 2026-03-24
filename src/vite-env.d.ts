@@ -1,6 +1,6 @@
 /// <reference types="vite/client" />
 
-declare module "*.scss"
+declare module "*.css"
 
 declare module "*.svg" {
   import * as React from "react"

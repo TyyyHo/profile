@@ -1,4 +1,4 @@
-import "./scrollHint.scss"
+import "./scrollHint.css"
 
 import { ReactComponent as ScrollImg } from "../../../assets/img/hint/tap.svg"
 
