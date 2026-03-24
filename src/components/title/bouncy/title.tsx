@@ -1,6 +1,6 @@
 import { useState } from "react"
-import "./title.scss"
-import "./title_mobile.scss"
+import "./title.css"
+import "./title_mobile.css"
 
 interface TitleProps {
   title: string

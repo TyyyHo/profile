@@ -1,4 +1,4 @@
-import "./clickHint.scss"
+import "./clickHint.css"
 
 import { ReactComponent as ClickImg } from "../../../assets/img/hint/tap.svg"
 

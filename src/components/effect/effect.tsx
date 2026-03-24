@@ -1,5 +1,5 @@
-import "./effect.scss"
-import "./effect_mobile.scss"
+import "./effect.css"
+import "./effect_mobile.css"
 
 import BirdsEye from "./birdsEye/birdsEye"
 import Spread from "./spread/spread"

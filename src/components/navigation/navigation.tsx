@@ -1,5 +1,5 @@
-import "./navigation.scss"
-import "./navigation_mobile.scss"
+import "./navigation.css"
+import "./navigation_mobile.css"
 
 //photo
 import logo from "/src/assets/img/logo/owl.webp"

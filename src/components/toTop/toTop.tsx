@@ -1,5 +1,5 @@
-import "./toTop.scss"
-import "./toTop_mobile.scss"
+import "./toTop.css"
+import "./toTop_mobile.css"
 
 import arrow from "/src/assets/img/toTop/up_ward.png"
 

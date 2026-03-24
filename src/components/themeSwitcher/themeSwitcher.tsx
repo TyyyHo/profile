@@ -1,5 +1,5 @@
-import "./themeSwitcher.scss"
-import "./themeSwitcher_mobile.scss"
+import "./themeSwitcher.css"
+import "./themeSwitcher_mobile.css"
 
 import { ReactComponent as Circle } from "/src/assets/img/themeSwitcher/switcher.svg"
 import { ReactComponent as Tick } from "/src/assets/img/themeSwitcher/tick.svg"

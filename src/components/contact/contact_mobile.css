@@ -1,0 +1,21 @@
+@media (max-width: 1250px) {
+  #contactContainer #info {
+    flex-direction: column;
+  }
+  #contactContainer #info .contactItem {
+    width: 50%;
+    margin: 3% 0;
+    padding: 3vh 0;
+  }
+}
+@media (max-width: 420px) {
+  #contactContainer p {
+    font-size: 11px;
+    font-weight: 600;
+  }
+  #contactContainer #info .contactItem {
+    width: 70%;
+    margin: 3% 0;
+    padding: 5% 0;
+  }
+}

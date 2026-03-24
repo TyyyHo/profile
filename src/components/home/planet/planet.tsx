@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
-import "./planet.scss"
-import "./planet_mobile.scss"
+import "./planet.css"
+import "./planet_mobile.css"
 
 import { TechStackList } from "../../../lib/constant"
 import type { TechStackItem } from "../../../lib/constant"

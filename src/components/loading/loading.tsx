@@ -1,4 +1,4 @@
-import "./loading.scss"
+import "./loading.css"
 
 interface LoadingProps {
   finish: boolean

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react"
 import anime from "animejs"
-import "./spread.scss"
-import "./spread_mobile.scss"
+import "./spread.css"
+import "./spread_mobile.css"
 
 import ClickHint from "../../hint/click/clickHint"
 

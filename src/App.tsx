@@ -1,5 +1,5 @@
-import "./App.scss"
-import "./theme.scss"
+import "./App.css"
+import "./theme.css"
 
 import { useEffect, useState } from "react"
 

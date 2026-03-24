@@ -1,8 +1,3 @@
-//RWD (width is higher than 1280, lower than 1600)
-@media (max-width: 1600px) {
-}
-
-//RWD (width is higher than 412, lower than 1280)
 @media (max-width: 1250px) {
   #toTop {
     right: 35px;
@@ -11,8 +6,6 @@
     height: 40px;
   }
 }
-
-//RWD (width is lower than 420)
 @media (max-width: 420px) {
   #toTop {
     right: 30px;

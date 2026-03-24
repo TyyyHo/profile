@@ -1,0 +1,35 @@
+#clickHint {
+  position: absolute;
+  cursor: pointer;
+  color: black;
+  z-index: 1;
+}
+#clickHint .svgContainer {
+  text-align: center;
+  animation: click 2s linear infinite;
+}
+@keyframes click {
+  0% {
+    transform: translate(-2px, -12px);
+  }
+  50% {
+    transform: translate(2px, 12px);
+  }
+  100% {
+    transform: translate(-2px, -12px);
+  }
+}
+#clickHint .svgContainer svg {
+  width: 80px;
+  height: 80px;
+}
+#clickHint p {
+  margin: 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+.hideClick {
+  opacity: 0;
+  transition: opacity 1.5s;
+}

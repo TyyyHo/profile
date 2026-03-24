@@ -1,0 +1,110 @@
+.darkTheme {
+  background-color: rgb(15, 15, 20);
+  color: rgb(255, 255, 255);
+  transition:
+    background-color 1.5s,
+    color 1.5s;
+}
+.darkTheme .loading {
+  background-color: rgb(15, 15, 20);
+}
+.darkTheme .loading .progress {
+  background-color: rgb(53, 248, 255);
+}
+.darkTheme #naviContainer {
+  background-color: rgb(15, 15, 20);
+  transition:
+    opacity 1s,
+    background-color 1.5s;
+}
+.darkTheme .notOnTop {
+  opacity: 0;
+}
+.darkTheme .notOnTop:hover {
+  opacity: 1;
+  transition: opacity 1.5s;
+}
+.darkTheme .fading text {
+  fill: rgb(15, 15, 20);
+  stroke: rgb(255, 255, 255);
+}
+.darkTheme #planet .orbit {
+  border: 3px solid rgba(255, 255, 255, 0.1);
+}
+.darkTheme #birdsEyeContainer #img {
+  border: 2px solid wheat;
+}
+.darkTheme #projectContainer .urlItem a {
+  color: rgb(255, 255, 255);
+  transition: color 1s;
+}
+.darkTheme #projectContainer .urlItem a:hover {
+  color: rgb(53, 248, 255);
+}
+.darkTheme #projectContainer .urlItem a::before {
+  background-color: rgb(240, 240, 240);
+  color: rgb(12, 1, 1);
+}
+.darkTheme #themeSwitcher #tick path {
+  stroke: white;
+}
+.darkTheme #contactContainer #info svg {
+  fill: yellow;
+}
+
+.lightTheme {
+  background-color: rgb(240, 240, 240);
+  color: rgb(12, 1, 1);
+  transition:
+    background-color 1.5s,
+    color 1.5s;
+}
+.lightTheme .loading {
+  background-color: rgb(240, 240, 240);
+}
+.lightTheme .loading .progress {
+  background-color: rgb(165, 201, 202);
+}
+.lightTheme #naviContainer {
+  background-color: rgb(240, 240, 240);
+  transition:
+    opacity 1s,
+    background-color 1.5s;
+}
+.lightTheme .notOnTop {
+  opacity: 0;
+}
+.lightTheme .notOnTop:hover {
+  opacity: 1;
+  transition: opacity 1.5s;
+}
+.lightTheme .fading text {
+  fill: rgb(240, 240, 240);
+  stroke: rgb(12, 1, 1);
+  transition:
+    fill 2s,
+    stroke 2s;
+}
+.lightTheme #planet .orbit {
+  border: 3px solid rgba(0, 0, 0, 0.1);
+}
+.lightTheme #birdsEyeContainer #img {
+  border: 3px solid rgb(230, 141, 26);
+}
+.lightTheme #projectContainer .urlItem a {
+  color: rgb(12, 1, 1);
+  transition: color 1.5s;
+}
+.lightTheme #projectContainer .urlItem a:hover {
+  color: rgb(165, 201, 202);
+}
+.lightTheme #projectContainer .urlItem a::before {
+  background-color: rgb(15, 15, 20);
+  color: rgb(255, 255, 255);
+}
+.lightTheme #themeSwitcher #tick path {
+  stroke: black;
+}
+.lightTheme #contactContainer #info svg {
+  fill: rgb(52, 201, 209);
+}
